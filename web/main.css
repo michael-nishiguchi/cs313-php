@@ -1,0 +1,23 @@
+.boldify:hover{
+    font-weight: bold;
+}
+body{
+    margin: 0 auto;
+}
+
+form, .boldify {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.text-center {
+    display: block;;
+    text-align: center;
+}
+
+.btn-group-justified {
+    width: 50%;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-right: auto;
+}
