@@ -12,7 +12,7 @@
   <main>
     <body>
       <?php 
-        include('common/header.php');
+        include 'common/header.php';
       ?>
       
         <div class="jumbotron">
