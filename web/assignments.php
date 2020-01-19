@@ -21,7 +21,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <a href="helow.html">Wk 2 Assignment</a>
+            <a href="hello.html">Wk 2 Assignment</a>
             </div>
 
         </div>
