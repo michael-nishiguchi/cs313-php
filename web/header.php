@@ -1,14 +1,11 @@
-<nav class="navbar navbar-expanded-md navbar-dark fixed-top bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="myNav">
-            <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="navbar-collapse collapse show" id="myNav" style>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="index.php">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="assignments.php">Assignments</a>
-            </li>
-        </ul>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">CS 313</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="assignments.php">Assignments</a></li>
+    </ul>
+  </div>
 </nav>
