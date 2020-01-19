@@ -11,22 +11,28 @@
   </head>
   <main>
     <body>
-      <nav class="navbar navbar-expanded-md navbar-dark fixed-top bg-dark">
-      </nav>
+      <?php 
+        include_once('common/header.php');
+      ?>
         <div class="jumbotron">
           <h1 class="display-2">Michael Nishiguchi</h1>
-          <p>Welcome to my website! You can see all the work I've done for CS 313 at BYU 0 Idaho!</p>
+          <p>Welcome to my website! You can see all the work I've done for CS 313 at BYU - Idaho!</p>
     </div>
 
       <div class="container">
         <div class="row">
           <div class="col-md-4">
             <h2>Rock Climbing</h2>
-            <img src="images/rock-climbing.jpg" class="img-fluid" alt="mountains">
-            <p>Living in Utah is great becuase I love rock cimbing. There are so many different mountains to climb and in the winter, there are some of the greatest climbing gyms to train in.
+            <p>Living in Utah is great becuase I love rock cimbing. There are so many different mountains to climb and in the winter, there are some of the greatest climbing gyms to train in.</p>
           </div>
-          <div class="col-md-4"></div>
-          <div class="col-md-4"></div>
+          <div class="col-md-4">
+          <h2>Music</h2>
+            <p>I've played music since I was young and have played with many different groups that range from jazz, funk, blues, pop</p>
+          </div>
+          <div class="col-md-4">
+          <h2>School</h2>
+            <p>I'm working on a Bachelor's degree in Web Design and Development at Brigham Young University - Idaho. I love recreating the things on the internet that I use every day. So far, I've worked with HTML, CSS, PHP, JavaScript, C++ and Java.</p>
+          </div>
         </div>
       </div>
     
