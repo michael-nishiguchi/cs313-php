@@ -22,6 +22,7 @@
         <div class="row">
           <div class="col-md-4">
             <h2>Rock Climbing</h2>
+            <img src="images/rock-climbing.jpg" class="img-fluid" alt="mountains">
             <p>Living in Utah is great becuase I love rock cimbing. There are so many different mountains to climb and in the winter, there are some of the greatest climbing gyms to train in.
           </div>
           <div class="col-md-4"></div>
