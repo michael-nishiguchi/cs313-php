@@ -14,8 +14,10 @@
       <?php 
         include 'header.php';
       ?>
-      
-        <h1>Content Coming Soon</h1>
+              <div class="jumbotron">
+          <h1 class="display-2">Content Coming Soon</h1>
+    </div>
+
       <div class="container">
         <div class="row">
           <div class="col-md-4">
