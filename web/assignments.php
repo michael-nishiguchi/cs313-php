@@ -7,26 +7,24 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="main.js"></script>
-    <title>Week 2 Activity</title>
+    <title>Assignments</title>
   </head>
-  <body>
-    
-    <div class="boldify" id="div1">First Div</div>
-    <div class="boldify">Second Div</div>
-    <div class="boldify" id="div3">Third Div</div>
+  <main>
+    <body>
+      <?php 
+        include 'header.php';
+      ?>
+      
+        <h1>Content Coming Soon</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <a href="helow.html">Wk 2 Assignment</a>
+            </div>
 
-    <form>
-        <div class="form-group">
-            <label for="color">Enter a color</label>
-            <input type="text" class="form-control" id="color">
         </div>
-        <input type="button" class="btn btn-primary" onclick="setColor()" value="Change Color">
-        <span class="notColor"></span>
-      </form>
-      <div class="btn-group-justified">
-        <button type="button" class="btn btn-primary" id="fade">Fade 3rd Div</button>
-        <button type="button" class="btn btn-primary">Click Me</button>
       </div>
-     
+    
+    </main>
   </body>
 </html>
