@@ -26,6 +26,7 @@
 
             <label for="email">Email</label>
             <input type="text" name="email">
+            <br>
 
             <?php 
                 $majors = array("Computer Science", "Web Design and Development", "Computer Information Technology", "Computer Engineering");
@@ -35,6 +36,7 @@
                 }
             ?> 
             <textarea placeholder="Comments..."></textarea>
+            <br>
 
             <input type="checkbox" name="continent[]" value="na">North America</input>
             <input type="checkbox" name="continent[]" value="sa">South America</input>
