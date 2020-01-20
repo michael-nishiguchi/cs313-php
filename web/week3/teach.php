@@ -20,30 +20,38 @@
 
     <div class="container">
         <form action="form.php" method="post">
-            <label for="name">Name</label>
-            <input type="text" name="name">
-            <br>
-            <label for="email">Email</label>
-            <input type="text" name="email">
-            <br>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email">
+            </div>
 
-            <?php 
-                $majors = array("Computer Science", "Web Design and Development", "Computer Information Technology", "Computer Engineering");
+            <div class="form-check">
+                <?php 
+                    $majors = array("Computer Science", "Web Design and Development", "Computer Information Technology", "Computer Engineering");
 
-                foreach ($majors as $val) {
-                  echo '<input type="radio" name="major" value=' . $val . '>' . $val . '<br>';
-                }
-            ?> 
-            <textarea placeholder="Comments..." name="comments"></textarea>
-            <br>
+                    foreach ($majors as $val) {
+                    echo '<input type="radio" name="major" value=' . $val . '>' . $val . '<br>';
+                    }
+                ?> 
+            </div>
 
-            <input type="checkbox" name="continent[]" value="na">North America</input>
-            <input type="checkbox" name="continent[]" value="sa">South America</input>
-            <input type="checkbox" name="continent[]" value="eur">Europe</input>
-            <input type="checkbox" name="continent[]" value="as">Asia</input>
-            <input type="checkbox" name="continent[]" value="af">Africa</input>
-            <input type="checkbox" name="continent[]" value="aus">Australia</input>
-            <input type="checkbox" name="continent[]" value="ant">Antarctica</input>
+            <div class="form-group">
+                <textarea placeholder="Comments..." name="comments"></textarea>
+            </div>
+            <div class="form-check">   
+                <input type="checkbox" name="continent[]" value="na">North America</input>
+                <input type="checkbox" name="continent[]" value="sa">South America</input>
+                <input type="checkbox" name="continent[]" value="eur">Europe</input>
+                <input type="checkbox" name="continent[]" value="as">Asia</input>
+                <input type="checkbox" name="continent[]" value="af">Africa</input>
+                <input type="checkbox" name="continent[]" value="aus">Australia</input>
+                <input type="checkbox" name="continent[]" value="ant">Antarctica</input>
+            </div>
 
             <br>
             <input type="submit">
