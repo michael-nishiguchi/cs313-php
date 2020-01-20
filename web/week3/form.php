@@ -8,7 +8,7 @@ $email = $_POST("email");
 $major = $_POST("major");
 $comments = $_POST("comments");
 
-$continents = $_POST('continents');
+$continents = $_POST('continent');
 
 
 //continent dictionary
@@ -56,9 +56,9 @@ $continentDictionary = [
         <br>
         <ul>
         <?php   
-                // Loop to store and display values of individual checked checkbox.
-                foreach($continents as $selected){
-                echo "<li>" . $continentDictionary[$selected] . "</li>";
+            // Loop to store and display values of individual checked checkbox.
+            foreach($continents as $selected){
+            echo "<li>" . $continentDictionary[$selected] . "</li>";
         ?>
         </ul>
     
