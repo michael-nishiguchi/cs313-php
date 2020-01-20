@@ -19,7 +19,7 @@
     </div>
 
     <div class="container">
-        <form action="form.php" method="POST">
+        <form action="form.php" method="post">
             <label for="name">Name</label>
             <input type="text" name="name">
 
