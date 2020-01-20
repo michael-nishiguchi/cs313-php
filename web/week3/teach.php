@@ -34,7 +34,7 @@
                   echo '<input type="radio" name="major" value=' . $val . '>' . $val . '<br>';
                 }
             ?> 
-            <textarea placeholder="Comments..."></textarea>
+            <textarea placeholder="Comments..." name="comments"></textarea>
             <br>
 
             <input type="checkbox" name="continent[]" value="na">North America</input>
