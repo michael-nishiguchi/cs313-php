@@ -11,7 +11,7 @@
   <main>
     <body>
       <?php 
-        include 'header.php';
+        include '../header.php';
       ?>
       
     <div class="jumbotron">
@@ -22,7 +22,7 @@
         <form action="form.php" method="post">
             <label for="name">Name</label>
             <input type="text" name="name">
-
+            <br>
             <label for="email">Email</label>
             <input type="text" name="email">
             <br>

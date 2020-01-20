@@ -32,13 +32,12 @@ $continentDictionary = [
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="main.js"></script>
     <title>Week 3 | Teach</title>
   </head>
   <main>
     <body>
       <?php 
-        include 'header.php';
+        include '../header.php';
       ?>
       
     <div class="jumbotron">
@@ -59,7 +58,8 @@ $continentDictionary = [
 
             // Loop to store and display values of individual checked checkbox.
             foreach($continents as $key => $value){
-            echo "<li>" . $value . "</li>";
+               echo "<li>" . $value . "</li>";
+            }
 
 
         ?>
