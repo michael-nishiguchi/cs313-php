@@ -19,7 +19,7 @@ $continentDictionary = [
     "as" => "Asia",
     "af" => "Africa",
     "aus" => "Australia",
-    "ant" => "Antarctica",
+    "ant" => "Antarctica"
 ];
 
 ?>
@@ -47,10 +47,10 @@ $continentDictionary = [
 
     <div class="container">
 
-        <h1>Name: <?php echo $name ?></h1>
-        <p>Email: <?php echo "<a href='mailto:'" . $email . ">" . $email . "</a>" ?></p>
-        <p>Major: <?php echo $major ?></p>
-        <p>Comments: <?php echo $comments ?></p>
+        <h1>Name: <?php echo $name; ?></h1>
+        <p>Email: <?php echo "<a href='mailto:'" . $email . ">" . $email . "</a>"; ?></p>
+        <p>Major: <?php echo $major; ?></p>
+        <p>Comments: <?php echo $comments; ?></p>
 
         <p>Continents Visited:<p>
         <br>

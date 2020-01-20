@@ -45,7 +45,7 @@
             <input type="checkbox" name="continent[]" value="aus">Australia</input>
             <input type="checkbox" name="continent[]" value="ant">Antarctica</input>
 
-
+            <br>
             <input type="submit">
         </form>
 
