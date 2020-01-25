@@ -22,7 +22,7 @@
         <form action="form.php" method="post">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" name="name">
+                <input type="text" name="name" clas="form-control">
             </div>
             
             <div class="form-group">
@@ -43,14 +43,18 @@
             <div class="form-group">
                 <textarea placeholder="Comments..." name="comments"></textarea>
             </div>
-            <div class="form-check">   
-                <input type="checkbox" name="continent[]" value="na">North America</input>
-                <input type="checkbox" name="continent[]" value="sa">South America</input>
-                <input type="checkbox" name="continent[]" value="eur">Europe</input>
-                <input type="checkbox" name="continent[]" value="as">Asia</input>
-                <input type="checkbox" name="continent[]" value="af">Africa</input>
-                <input type="checkbox" name="continent[]" value="aus">Australia</input>
-                <input type="checkbox" name="continent[]" value="ant">Antarctica</input>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="continent[]" value="na" id="na"></input>
+                <label class="form-check-label" for="na">North America</label>
+
+                <input class="form-check-input" type="checkbox" name="continent[]" value="sa">South America</input>
+                <label class="form-check-label" for="sa">South America</label>
+
+                <input class="form-check-input" type="checkbox" name="continent[]" value="eur">Europe</input>
+                <input class="form-check-input" type="checkbox" name="continent[]" value="as">Asia</input>
+                <input class="form-check-input" type="checkbox" name="continent[]" value="af">Africa</input>
+                <input class="form-check-input" type="checkbox" name="continent[]" value="aus">Australia</input>
+                <input class="form-check-input" type="checkbox" name="continent[]" value="ant">Antarctica</input>
             </div>
 
             <br>
