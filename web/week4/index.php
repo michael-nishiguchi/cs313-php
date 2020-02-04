@@ -17,7 +17,8 @@
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     foreach ($rows as $value) {
-        echo "<p>" . $value['book'] . " " . $value['chapter'] . ":" . $value['verse'] . " - \"" . $value['content'] . "\"</p>";
+        echo $value;
+        //echo "<p>" . $value['book'] . " " . $value['chapter'] . ":" . $value['verse'] . " - \"" . $value['content'] . "\"</p>";
     }
 ?>
 </body>
