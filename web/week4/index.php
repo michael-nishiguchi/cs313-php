@@ -7,7 +7,7 @@
 <body>
 
 <?php
-    require "dbConnect.php";
+    require("dbConnect.php");
     // DB assigned to db variable
     $db = get_db();
     $query = "SELECT * FROM Scriptures";
