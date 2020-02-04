@@ -15,7 +15,7 @@
         include 'header.php';
       ?>
           <div class="jumbotron">
-          <h1 class="display-2">Content Coming Soon</h1>
+          <h1 class="display-2">CS 313 Assignments</h1>
     </div>
 
       <div class="container">
