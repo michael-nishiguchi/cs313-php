@@ -10,7 +10,7 @@
     require "dbConnect.php";
     // DB assigned to db variable
     $db = get_db();
-    $query = 'SELECT * FROM Scriptures';
+    $query = "SELECT * FROM Scriptures";
     $stmt = $db->prepare($query);
     $stmt->execute();
 
