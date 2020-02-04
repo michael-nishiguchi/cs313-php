@@ -21,7 +21,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <a href="hello.html">Wk 2 Assignment</a>
+            <a href="week2/hello.html">Wk 2 Assignment</a>
             <br>
             <a href="week3/teach.php">Wk 3 Assignment</a>
             <br>
