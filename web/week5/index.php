@@ -14,7 +14,7 @@
     $stmt = $db->prepare($query);
     $stmt->execute();
 
-    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
     var_dump($row);
 	// The variable "row" now holds the complete record for that
