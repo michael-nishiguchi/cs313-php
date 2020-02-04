@@ -26,6 +26,8 @@
             <a href="week3/teach.php">Wk 3 Assignment</a>
             <br>
             <a href="browse.php">Browse</a>
+            <br>
+            <a href="week4/index.php">Wk 5 Assignment</a>
             </div>
 
         </div>
