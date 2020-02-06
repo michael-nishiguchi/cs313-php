@@ -47,12 +47,14 @@ $transactions = sortTransactionsAsc();
     </thead>
     <tbody>
       <?php 
+      /*
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
           echo '<th scope="col">' . $row['category_name'] . '</th>';
           echo '<th scope="col">' . $row['amount_budgeted'] . '</th>'; 
           echo '</tr>';
         }
+        */
       ?>
     </tbody>
   </table>
