@@ -24,7 +24,7 @@ switch ($action){
         break;
     
     case 'view-budget':
-        include 'view-budget';
+        include 'view-budget.php';
         break;
 
     case 'home':
