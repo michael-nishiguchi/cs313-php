@@ -1,15 +1,15 @@
 <?php
 require("dbConnect.php");
 
-function addCategory($categoryName, $amountBudgeted) {
+function addCategory($category_name, $amount_budgeted) {
 
     $db = get_db();
     $sql = 'INSERT INTO category
                 (category_name, amount_budgeted)
-            VALUES (:categoryName, :amountBudgeted)';
+            VALUES (:category_name, :amount_budgeted)';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':categoryName', $categoryName, PDO::PARAM_STR);
-    $stmt->bindValue(':amountBudgeted', $amountBudgeted, PDO::PARAM_STR);
+    $stmt->bindValue(':category_name', $category_name, PDO::PARAM_STR);
+    $stmt->bindValue(':amount_budgeted', $amount_budgeted, PDO::PARAM_STR);
     $stmt->execute();
     $rowsChanged = $stmt->rowCount();
     $stmt->closeCursor();
@@ -66,13 +66,13 @@ function sortTransactionsDesc() {
     return $stmt;
 }
 
-function getCatFromId($catId){
+function getCatFromId($category_id){
     $db = get_db();
     $sql = 'SELECT category_name 
             FROM category
-            WHERE category_id = (:catId)';
+            WHERE category_id = (:category_id)';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':catId', $catId, PDO::PARAM_STR)
+    $stmt->bindValue(':category_id', $category_id, PDO::PARAM_STR)
     $stmt->execute();
     //$stmt->closeCursor();
     return $stmt;
