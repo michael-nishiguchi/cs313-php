@@ -2,7 +2,7 @@
 require_once 'queries.php';
 $users = getAllUsers();
 $categories = getAllCategories();
-
+$transactions = getAllTransactions();
 ?>
 
 <!doctype html>
@@ -50,6 +50,27 @@ $categories = getAllCategories();
           echo '<tr>';
           echo '<th scope="col">' . $row['category_name'] . '</th>';
           echo '<th scope="col">' . $row['amount_budgeted'] . '</th>'; 
+          echo '</tr>';
+        }
+      ?>
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Transaction Date</th>
+        <th scope="col">Cost</th>
+        <th scope="col">Business Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php 
+        while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
+          echo '<tr>';
+          echo '<th scope="col">' . $row['transaction_date'] . '</th>';
+          echo '<th scope="col">' . $row['cost'] . '</th>'; 
+          echo '<th scope="col">' . $row['business_name'] . '</th>'; 
           echo '</tr>';
         }
       ?>

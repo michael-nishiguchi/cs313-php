@@ -33,3 +33,12 @@ function getAllCategories() {
     //$stmt->closeCursor();
     return $stmt;
 }
+
+function getAllTransactions() {
+    $db = get_db();
+    $sql = 'SELECT transaction_date, cost, business_name FROM transactions';
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    //$stmt->closeCursor();
+    return $stmt;
+}
