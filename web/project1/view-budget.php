@@ -28,6 +28,7 @@ $stmt = getAllUsers();
   </table>
 
   <?php 
+  var_dump($stmt);
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
       echo $row['user_name'] . $row['email']; 
     }
