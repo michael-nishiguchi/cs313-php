@@ -46,7 +46,7 @@ function getAllTransactions() {
 
 function sortTransactionsAsc() {
     $db = get_db();
-    $sql = 'SELECT transaction_date, cost, business_name 
+    $sql = 'SELECT transaction_date, cost, business_name, category_id 
             FROM transactions
             ORDER BY cost ASC';
     $stmt = $db->prepare($sql);
