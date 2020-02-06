@@ -25,14 +25,14 @@ $stmt = getAllUsers();
       </tr>
     </thead>
     <tbody>
-      <tr>
       <?php 
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+          echo '<tr>';
           echo '<th scope="col">' . $row['user_name'] . '</th>';
           echo '<th scope="col">' . $row['email'] . '</th>'; 
+          echo '</tr>';
         }
       ?>
-      
     </tbody>
   </table>
 
