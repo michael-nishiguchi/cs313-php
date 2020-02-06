@@ -69,7 +69,8 @@ $transactions = getAllTransactions();
       <?php 
         while ($row = $transactions->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
-          //$catName = getCatFromId($row['category_id']);
+          $catName = getCatFromId($row['category_id']);
+          var_dump($catName);
           echo '<th scope="col">' . $row['category_id'] . '</th>'; 
           echo '<th scope="col">' . $row['transaction_date'] . '</th>';
           echo '<th scope="col">' . $row['cost'] . '</th>'; 
