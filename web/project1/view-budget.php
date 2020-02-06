@@ -60,6 +60,7 @@ $transactions = sortTransactionsAsc();
   <table class="table">
     <thead>
       <tr>
+        <th scope="col">Category</th>
         <th scope="col">Transaction Date</th>
         <th scope="col">Cost</th>
         <th scope="col">Business Name</th>
@@ -69,9 +70,10 @@ $transactions = sortTransactionsAsc();
       <?php 
         while ($row = $transactions->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
+          $catName = getCatFromId($row['category_id']);
+          echo '<th scope="col">' . $catName . '</th>'; 
           echo '<th scope="col">' . $row['transaction_date'] . '</th>';
           echo '<th scope="col">' . $row['cost'] . '</th>'; 
-          //echo '<th scope="col">' . $row['cost'] . '</th>'; 
           echo '<th scope="col">' . $row['business_name'] . '</th>'; 
           echo '</tr>';
         }

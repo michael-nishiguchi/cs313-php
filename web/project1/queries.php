@@ -48,8 +48,31 @@ function sortTransactionsAsc() {
     $db = get_db();
     $sql = 'SELECT transaction_date, cost, business_name 
             FROM transactions
+            ORDER BY cost ASC';
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    //$stmt->closeCursor();
+    return $stmt;
+}
+
+function sortTransactionsDesc() {
+    $db = get_db();
+    $sql = 'SELECT transaction_date, cost, business_name, category_id 
+            FROM transactions
             ORDER BY cost DESC';
     $stmt = $db->prepare($sql);
+    $stmt->execute();
+    //$stmt->closeCursor();
+    return $stmt;
+}
+
+function getCatFromId($catId){
+    $db = get_db();
+    $sql = 'SELECT category_name 
+            FROM category
+            WHERE category_id = (:catId)';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':catId', $catId, PDO::PARAM_STR)
     $stmt->execute();
     //$stmt->closeCursor();
     return $stmt;
