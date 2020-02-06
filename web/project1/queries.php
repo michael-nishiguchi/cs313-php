@@ -48,7 +48,7 @@ function sortTransactionsAsc() {
     $db = get_db();
     $sql = 'SELECT transaction_date, cost, business_name 
             FROM transactions
-            ORDER BY cost ASC';
+            ORDER BY cost DESC';
     $stmt = $db->prepare($sql);
     $stmt->execute();
     //$stmt->closeCursor();

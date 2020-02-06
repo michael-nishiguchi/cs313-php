@@ -71,6 +71,7 @@ $transactions = sortTransactionsAsc();
           echo '<tr>';
           echo '<th scope="col">' . $row['transaction_date'] . '</th>';
           echo '<th scope="col">' . $row['cost'] . '</th>'; 
+          //echo '<th scope="col">' . $row['cost'] . '</th>'; 
           echo '<th scope="col">' . $row['business_name'] . '</th>'; 
           echo '</tr>';
         }
