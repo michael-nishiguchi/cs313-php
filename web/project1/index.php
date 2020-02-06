@@ -1,27 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Scriptures</title>
-</head>
-
-<body>
-
 <?php
-    require("queries.php");
+    require_once 'queries.php';
     // DB assigned to db variable
-    ?>
+    $action = filter_input(INPUT_POST, 'action');
+if ($action == NULL) {
+    $action = filter_input(INPUT_GET, 'action');
+}
 
+switch ($action){
+    case 'add-cat-view':
+        include '../view/add-cat.php';
+        break;
+    case 'add-cat':
 
-    <form action="addCategory()" method="post">
+        $message = 'my message';
+        header('test.php');
 
-    <label for="categoryName">New Category Name</label>
-    <input type="text" name="categoryName" id="categoryName" required>
-    <input class="submit" type="submit" name="submit" value="Add Category">
-    <!-- Action name - value pair - does not show to user
-    <input type="hidden" name="action" value="add-cat">-->
-</form>
+    default:
+        include '../view/prod-mgmt.php';
+        break;
 
-
-</body>
-
-</html>
+?>
