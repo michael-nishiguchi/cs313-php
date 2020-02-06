@@ -21,6 +21,6 @@ function getAllUsers() {
     $sql = 'SELECT user_name, email FROM users';
     $stmt = $db->prepare($sql);
     $stmt->execute();
-    $stmt->closeCursor();
+    //$stmt->closeCursor();
     return $stmt;
 }
