@@ -19,20 +19,23 @@ $stmt = getAllUsers();
 
   <table class="table">
     <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col"></th>
-      <th scope="col"></th>
+      <tr>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
       </tr>
-      </thead>
+    </thead>
+    <tbody>
+      <tr>
+      <?php 
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+          echo '<th scope="col">' . $row['user_name'] . '</th>';
+          echo '<th scope="col">' . $row['email'] . '</th>'; 
+        }
+      ?>
+      
+    </tbody>
   </table>
 
-  <?php 
-  var_dump($stmt);
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-      echo $row['user_name'] . $row['email']; 
-    }
-  ?>
 
 
 
