@@ -18,19 +18,21 @@ switch ($action){
         }
         $message = 'not added';
         include 'test.php';
-        exit;
-    case 'show-cat':
-
         break;
-        case 'view-budget':
-            include 'view-budget';
+
+    case 'show-cat':
+        break;
+    
+    case 'view-budget':
+        include 'view-budget';
         break;
 
     case 'home':
         include 'home.php';
     break;
+
     default:
-        include 'home.php'
+        include 'home.php';
         break;
     }
 ?>
