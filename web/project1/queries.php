@@ -6,10 +6,10 @@ function addCategory($categoryName, $amountBudgeted) {
     $db = get_db();
     $sql = 'INSERT INTO category
                 (category_name, amount_budgeted)
-            VALUES (:category_name, :amount_budgeted)';
+            VALUES (:categoryName, :amountBudgeted)';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':category_name', $categoryName, PDO::PARAM_STR);
-    $stmt->bindValue(':amount_budgeted', $amountBudgeted, PDO::PARAM_STR);
+    $stmt->bindValue(':categoryName', $categoryName, PDO::PARAM_STR);
+    $stmt->bindValue(':amountBudgeted', $amountBudgeted, PDO::PARAM_STR);
     $stmt->execute();
     $rowsChanged = $stmt->rowCount();
     $stmt->closeCursor();
