@@ -1,7 +1,8 @@
 <?php
-    require_once 'queries.php';
-    // DB assigned to db variable
-    $action = filter_input(INPUT_POST, 'action');
+require_once 'queries.php';
+
+
+$action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
     $action = filter_input(INPUT_GET, 'action');
 }
@@ -13,10 +14,11 @@ switch ($action){
     case 'add-cat':
 
         $message = 'my message';
-        header('test.php');
+        include 'test.php';
+    exit;
 
     default:
         include '../view/prod-mgmt.php';
         break;
-
+    }
 ?>
