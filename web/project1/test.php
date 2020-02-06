@@ -1,3 +1,10 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>test</title>
+</head>
+<body>
+
 <form action="index.php" method="post">
 <?php if (isset$message echo $message;) ?>
     <label for="categoryName">New Category Name</label>
@@ -6,3 +13,6 @@
     <!-- Action name - value pair - does not show to user-->
     <input type="hidden" name="action" value="add-cat">
 </form>
+
+</body>
+</html>
