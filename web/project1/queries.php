@@ -72,7 +72,7 @@ function getCatFromId($category_id){
             FROM category
             WHERE category_id = (:category_id)';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':category_id', $category_id, PDO::PARAM_STR)
+    $stmt->bindValue(':category_id', $category_id, PDO::PARAM_STR);
     $stmt->execute();
     //$stmt->closeCursor();
     return $stmt;
