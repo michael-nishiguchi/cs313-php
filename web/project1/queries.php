@@ -66,7 +66,6 @@ function sortTransactionsDesc() {
     return $stmt;
 }
 
-/*
 function getCatFromId($category_id){
     $db = get_db();
     $sql = 'SELECT category_name 
