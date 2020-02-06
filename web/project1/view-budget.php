@@ -66,7 +66,7 @@ $transactions = getAllTransactions();
     </thead>
     <tbody>
       <?php 
-        while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
+        while ($row = $transactions->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
           echo '<th scope="col">' . $row['transaction_date'] . '</th>';
           echo '<th scope="col">' . $row['cost'] . '</th>'; 
