@@ -1,4 +1,5 @@
 <?php
+include('queries.php');
 $stmt = getAllUsers();
 
 ?>
