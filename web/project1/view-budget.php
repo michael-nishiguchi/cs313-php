@@ -2,7 +2,8 @@
 require_once 'queries.php';
 $users = getAllUsers();
 $categories = getAllCategories();
-$transactions = getAllTransactions();
+//$transactions = getAllTransactions();
+$transactions = sortTransactionsAsc();
 ?>
 
 <!doctype html>

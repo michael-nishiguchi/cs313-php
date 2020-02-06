@@ -25,6 +25,7 @@ function getAllUsers() {
     return $stmt;
 }
 
+
 function getAllCategories() {
     $db = get_db();
     $sql = 'SELECT category_name, amount_budgeted FROM category';
@@ -37,6 +38,17 @@ function getAllCategories() {
 function getAllTransactions() {
     $db = get_db();
     $sql = 'SELECT transaction_date, cost, business_name FROM transactions';
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    //$stmt->closeCursor();
+    return $stmt;
+}
+
+function sortTransactionsAsc() {
+    $db = get_db();
+    $sql = 'SELECT transaction_date, cost, business_name 
+            FROM transactions
+            ORDER BY cost ASC';
     $stmt = $db->prepare($sql);
     $stmt->execute();
     //$stmt->closeCursor();
