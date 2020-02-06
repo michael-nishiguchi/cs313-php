@@ -1,31 +1,53 @@
-create TABLE Scriptures (
-    id SERIAL UNIQUE NOT NULL PRIMARY KEY,
-    book varchar(25) NOT NULL,
-    chapter int NOT NULL,
-    verse int NOT NULL,
-    content text NOT NULL
+CREATE TABLE users
+(
+    user_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
+    user_name varchar(255) UNIQUE NOT NULL,
+    email varchar(255) UNIQUE NOT NULL
 );
 
-insert into Scriptures
-    (book, chapter, verse, content)
-    VALUES (
-        'John 1', 1, 5, 'And the alight shineth in darkness; and the darkness comprehended it not.'
+create TABLE category
+(
+    category_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
+    category_name varchar(255) UNIQUE NOT NULL,
+    amount_budgeted float NOT NULL
 );
 
-insert into Scriptures
-    (book, chapter, verse, content)
-    VALUES (
-        'Doctrine and Covenants', 88, 49, 'The light shineth in darkness, and the darkness comprehendeth it not; nevertheless, the day shall come when you shall comprehend even God, being quickened in him and by him.'
+create TABLE transactions
+(
+    transaction_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
+    transaction_date date NOT NULL,
+    cost float NOT NULL,
+    business_name varchar(255) NOT NULL,
+    category_id int REFERENCES category (category_id)
 );
 
-insert into Scriptures
-    (book, chapter, verse, content)
+insert into users
+    (user_name, email)
     VALUES (
-        'Doctrine and Covenants', 93, 28, 'He that keepeth his commandments receiveth truth and light, until he is glorified in truth and knoweth all things.'
+        'My username', 'mike@gmail.com'
 );
 
-insert into Scriptures
-    (book, chapter, verse, content)
+insert into category
+    (category_name, amount_budgeted)
     VALUES (
-        'Mosiah', 16, 9, 'He is the light and the life of the world; yea, a light that is endless, that can never be darkened; yea, and also a life which is endless, that there can be no more death.'
+        'rent', 1000
 );
+
+insert into category
+    (category_name, amount_budgeted)
+    VALUES (
+        'food', 300
+);
+
+insert into transactions
+    (transaction_date, cost, business_name, category_id)
+    VALUES (
+        CURRENT_DATE, 200, 'landlord', (SELECT category_id 
+                                        FROM category
+                                        WHERE category_name = 'rent')
+);
+
+UPDATE users 
+SET email = 'mike@gmail.com'
+WHERE user_name = 'My username';
+

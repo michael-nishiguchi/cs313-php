@@ -8,9 +8,6 @@ if ($action == NULL) {
 }
 
 switch ($action){
-    case 'add-cat-view':
-        include '../view/add-cat.php';
-        break;
     case 'add-cat':
         $categoryName = filter_input(INPUT_POST, 'categoryName', FILTER_SANITIZE_STRING);
         $amountBudgeted = filter_input(INPUT_POST, 'amountBudgeted', FILTER_SANITIZE_STRING);
@@ -21,10 +18,19 @@ switch ($action){
         }
         $message = 'not added';
         include 'test.php';
-    exit;
+        exit;
+    case 'show-cat':
 
+        break;
+        case 'view-budget':
+            include 'view-budget';
+        break;
+
+    case 'home':
+        include 'home.php';
+    break;
     default:
-        include '../view/prod-mgmt.php';
+        include 'home.php'
         break;
     }
 ?>
