@@ -24,3 +24,12 @@ function getAllUsers() {
     //$stmt->closeCursor();
     return $stmt;
 }
+
+function getAllCategories() {
+    $db = get_db();
+    $sql = 'SELECT category_name, amount_budgeted FROM category';
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    //$stmt->closeCursor();
+    return $stmt;
+}

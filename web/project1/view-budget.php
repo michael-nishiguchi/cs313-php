@@ -1,6 +1,7 @@
 <?php
 require_once 'queries.php';
-$stmt = getAllUsers();
+$users = getAllUsers();
+$categories = getAllCategories();
 
 ?>
 
@@ -26,10 +27,29 @@ $stmt = getAllUsers();
     </thead>
     <tbody>
       <?php 
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        while ($row = $users->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
           echo '<th scope="col">' . $row['user_name'] . '</th>';
           echo '<th scope="col">' . $row['email'] . '</th>'; 
+          echo '</tr>';
+        }
+      ?>
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Category Name</th>
+        <th scope="col">Amount Budgeted</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php 
+        while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
+          echo '<tr>';
+          echo '<th scope="col">' . $row['category_name'] . '</th>';
+          echo '<th scope="col">' . $row['amount_budgeted'] . '</th>'; 
           echo '</tr>';
         }
       ?>
