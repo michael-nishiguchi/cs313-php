@@ -1,5 +1,5 @@
 <?php
-include('queries.php');
+require_once 'queries.php';
 $stmt = getAllUsers();
 
 ?>
