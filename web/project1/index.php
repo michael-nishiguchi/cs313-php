@@ -12,7 +12,9 @@ switch ($action){
         include '../view/add-cat.php';
         break;
     case 'add-cat':
-
+        $categoryName = filter_input(INPUT_POST, 'categoryName', FILTER_SANITIZE_STRING);
+        $amountBudgeted = filter_input(INPUT_POST, 'amountBudgeted', FILTER_SANITIZE_STRING);
+        addCategory($categoryName, $amountBudgeted);
         $message = 'my message';
         include 'test.php';
     exit;
