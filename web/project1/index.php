@@ -14,6 +14,8 @@ switch ($action){
     case 'add-cat':
         $categoryName = filter_input(INPUT_POST, 'categoryName', FILTER_SANITIZE_STRING);
         $amountBudgeted = filter_input(INPUT_POST, 'amountBudgeted', FILTER_SANITIZE_STRING);
+        var_dump($categoryName);
+        var_dump($amountBudgeted);
         if(addCategory($categoryName, $amountBudgeted)){
             $message = 'Added';
         }
