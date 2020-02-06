@@ -37,7 +37,7 @@ function getAllCategories() {
 
 function getAllTransactions() {
     $db = get_db();
-    $sql = 'SELECT transaction_date, cost, business_name FROM transactions';
+    $sql = 'SELECT transaction_date, cost, business_name, category_id FROM transactions';
     $stmt = $db->prepare($sql);
     $stmt->execute();
     //$stmt->closeCursor();
