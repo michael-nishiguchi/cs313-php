@@ -28,9 +28,9 @@ $stmt = getAllUsers();
   </table>
 
   <?php 
-    // while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    //   echo $row['user_name'] . $row['email']; 
-    // }
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+      echo $row['user_name'] . $row['email']; 
+    }
   ?>
 
 
