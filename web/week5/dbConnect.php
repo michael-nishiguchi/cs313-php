@@ -16,7 +16,6 @@
 			echo "Connection error.";
 			die();
 		}
-			echo "end of db connect";
 			return $db;
 	}
 ?>

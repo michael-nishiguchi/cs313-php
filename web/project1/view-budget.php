@@ -42,6 +42,7 @@ $transactions = getAllTransactions();
       <tr>
         <th scope="col">Category Name</th>
         <th scope="col">Amount Budgeted</th>
+        <th scope="col">Amount Remaining</th>
       </tr>
     </thead>
     <tbody>
