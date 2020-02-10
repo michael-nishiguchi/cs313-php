@@ -34,7 +34,7 @@
     ?>
     </ul>
 
-    <input type="sumbit">
+    <input type="submit">
 </form>
 </body>
 
