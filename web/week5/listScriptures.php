@@ -35,9 +35,8 @@
     $stmt->execute();
 
     $scripture_id = $stmt->fetch(PDO::FETCH_ASSOC);
-    $scripture_id = $scripture_id["id"];
 
-    echo json_encode($topics);
+    echo json_encode($scripture);
     
     //add to link table
     $query = "INSERT INTO link (scripture_id, topic_id) VALUES (:scripture_id, :topic_id);";
@@ -56,6 +55,7 @@
     $stmt->execute();
     $scriptures = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    
     function getTopicId($scriptureId) {
        global $db;
 
