@@ -25,7 +25,7 @@
     $stmt->bindValue(":content", $content, PDO::PARAM_STR);
     $stmt->execute();
     
-    /* //get ID from new scripture entry
+   //get ID from new scripture entry
     $query = "SELECT id FROM Scriptures WHERE book=:book & chapter=:chapter & verse=:verse & content=:content LIMIT 1;";
     $stmt = $db->prepare($query);
     $stmt->bindValue(":book", $book, PDO::PARAM_STR);
@@ -36,6 +36,7 @@
 
     $scripture_id = $stmt->fetch(PDO::FETCH_ASSOC);
     $scripture_id = $scripture_id["id"];
+    /*
     //add to link table
     $query = "INSERT INTO link (scripture_id, topic_id) VALUES (:scripture_id, :topic_id);";
     foreach ($topics as $topic_id) {
