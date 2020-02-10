@@ -26,6 +26,8 @@
     $stmt->execute();
     
    //get ID from new scripture entry
+   $scripture_id = $db->lastInsertId("scripture_id_seq");
+   /*
     $query = "SELECT id FROM Scriptures WHERE book=:book & chapter=:chapter & verse=:verse & content=:content LIMIT 1;";
     $stmt = $db->prepare($query);
     $stmt->bindValue(":book", $book, PDO::PARAM_STR);
@@ -33,10 +35,11 @@
     $stmt->bindValue(":verse", $verse, PDO::PARAM_INT);
     $stmt->bindValue(":content", $content, PDO::PARAM_STR);
     $stmt->execute();
+    */
 
-    $scripture_id = $stmt->fetch(PDO::FETCH_ASSOC);
+    //$scripture_id = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    echo json_encode($scripture);
+    echo json_encode($scripture_id);
     
     //add to link table
     $query = "INSERT INTO link (scripture_id, topic_id) VALUES (:scripture_id, :topic_id);";
