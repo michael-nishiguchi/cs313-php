@@ -14,7 +14,7 @@
     $chapter = strip_tags($_POST["chapter"]);
     $verse = strip_tags($_POST["verse"]);
     $content = strip_tags($_POST["content"]);
-    $topics = $_POST["topics[]"];
+    $topics = $_POST["topic[]"];
 
     //insert new scripture into DB
     $query = "INSERT INTO Scriptures (book, chapter, verse, content) VALUES (:book, :chapter, :verse, :content);";
@@ -39,7 +39,6 @@
 
     echo json_encode($topics);
     
-    /*
     //add to link table
     $query = "INSERT INTO link (scripture_id, topic_id) VALUES (:scripture_id, :topic_id);";
     foreach ($topics as $topic_id) {
@@ -49,7 +48,7 @@
             $stmt->bindValue(":topic_id", $topic_id, PDO::PARAM_INT);
             $stmt->execute();
        // }
-   } */
+   } 
 
     //get all scriptures
     $query = "SELECT book, chapter, verse, content FROM Scriptures";
