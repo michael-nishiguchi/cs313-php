@@ -34,7 +34,7 @@
     ?>
     </ul>
 
-    <input type="submit">
+    <button type="submit">Submit</button>
 </form>
 </body>
 
