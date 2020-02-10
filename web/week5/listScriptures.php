@@ -26,7 +26,7 @@
     $stmt->execute();
     
    //get ID from new scripture entry
-   $scripture_id = $db->lastInsertId("scripture_id_seq");
+   $scripture_id = $db->lastInsertId();
    /*
     $query = "SELECT id FROM Scriptures WHERE book=:book & chapter=:chapter & verse=:verse & content=:content LIMIT 1;";
     $stmt = $db->prepare($query);
