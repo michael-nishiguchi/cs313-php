@@ -19,6 +19,7 @@
     <label for="content">Content</label>
     <textarea name="content" rows="5"></textarea>
 
+
     <ul>
     <?php 
         require("dbConnect.php");
@@ -32,6 +33,8 @@
         }
     ?>
     </ul>
+
+    <input type="sumbit">
 </form>
 </body>
 
