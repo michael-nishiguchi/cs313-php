@@ -14,7 +14,7 @@
     $chapter = strip_tags($_POST["chapter"]);
     $verse = strip_tags($_POST["verse"]);
     $content = strip_tags($_POST["content"]);
-    $topics = $_POST["topic[]"];
+    $topics = $_POST["topic"];
 
     //insert new scripture into DB
     $query = "INSERT INTO Scriptures (book, chapter, verse, content) VALUES (:book, :chapter, :verse, :content);";
