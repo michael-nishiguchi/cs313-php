@@ -25,7 +25,7 @@
         require("dbConnect.php");
         $db = get_db();
 
-        $query = "SELECT topic_name FROM topic;";
+        $query = "SELECT id, topic_name FROM topic;";
         $stmt = $db->prepare($query);
         $stmt->execute();
         
