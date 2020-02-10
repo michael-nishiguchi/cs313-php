@@ -14,8 +14,9 @@
     $chapter = strip_tags($_POST["chapter"]);
     $verse = strip_tags($_POST["verse"]);
     $content = strip_tags($_POST["content"]);
-    $topics = $_POST("topics[]");
-    
+    $topics = $_POST["topics[]"];
+
+    //insert new scripture into DB
     $query = "INSERT INTO Scriptures (book, chapter, verse, content) VALUES (:book, :chapter, :verse, :content);";
     $stmt = $db->prepare($query);
     $stmt->bindValue(":book", $book, PDO::PARAM_STR);
@@ -23,18 +24,34 @@
     $stmt->bindValue(":verse", $verse, PDO::PARAM_INT);
     $stmt->bindValue(":content", $content, PDO::PARAM_STR);
     $stmt->execute();
-
     
-
-
-
-    $query = "SELECT book, chapter, verse, content FROM Scriptures";
-    
+    /* //get ID from new scripture entry
+    $query = "SELECT id FROM Scriptures WHERE book=:book & chapter=:chapter & verse=:verse & content=:content LIMIT 1;";
     $stmt = $db->prepare($query);
+    $stmt->bindValue(":book", $book, PDO::PARAM_STR);
+    $stmt->bindValue(":chapter", $chapter, PDO::PARAM_INT);
+    $stmt->bindValue(":verse", $verse, PDO::PARAM_INT);
+    $stmt->bindValue(":content", $content, PDO::PARAM_STR);
     $stmt->execute();
 
-    $scriptures = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $scripture_id = $stmt->fetch(PDO::FETCH_ASSOC);
+    $scripture_id = $scripture_id["id"];
+    //add to link table
+    $query = "INSERT INTO link (scripture_id, topic_id) VALUES (:scripture_id, :topic_id);";
+    foreach ($topics as $topic_id) {
+       // if(isset($topic_id)){
+            $stmt = $db->prepare($query);
+            $stmt->bindValue(":scripture_id", $scripture_id, PDO::PARAM_INT);
+            $stmt->bindValue(":topic_id", $topic_id, PDO::PARAM_INT);
+            $stmt->execute();
+       // }
+   } */
 
+    //get all scriptures
+    $query = "SELECT book, chapter, verse, content FROM Scriptures";
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+    $scriptures = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     function getTopicId($scriptureId) {
        global $db;
