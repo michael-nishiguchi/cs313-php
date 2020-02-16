@@ -4,7 +4,7 @@ $user_id = $_SESSION['user_id'];
   if ($_SESSION['loggedin'] == TRUE) {
     
     $transactions = getTransactionsFromId($user_id);
-    while($row = $transactions->fetch(PDO::FETCH_ASSOC){
+    while($row = $transactions->fetchAll(PDO::FETCH_ASSOC){
       var_dump($row);
     }
     var_dump($transactions);
