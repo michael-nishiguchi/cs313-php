@@ -1,7 +1,7 @@
 <?php
 require_once 'queries.php';
   if ($_SESSION['loggedin']) {
-      //$transactions = getTransactionsFromId($_SESSION('user_id'));
+      $transactions = getTransactionsFromId($_SESSION('user_id'));
       $categories = getCategoriesFromId($_SESSION('user_id'));
     exit;
   } 
@@ -51,32 +51,36 @@ require_once 'queries.php';
   </table>
 
 
+<!--
 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Category</th>
+      <th scope="col">Transaction Date</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Business Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php 
+    /*
+      while ($row = $transactions->fetch(PDO::FETCH_ASSOC)) {
+        echo '<tr>';
+        $catName = getCatFromId($row['category_id']);
+        $catName = $catName->fetch(PDO::FETCH_ASSOC);
+        echo '<th scope="col">' . $catName['category_name'] . '</th>'; 
+        echo '<th scope="col">' . $row['transaction_date'] . '</th>';
+        echo '<th scope="col">' . $row['cost'] . '</th>'; 
+        echo '<th scope="col">' . $row['business_name'] . '</th>'; 
+        echo '</tr>';
+      }
+      */
+    ?>
+  </tbody>
+</table>
 
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Category</th>
-              <th scope="col">Transaction Date</th>
-              <th scope="col">Cost</th>
-              <th scope="col">Business Name</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php 
-              while ($row = $transactions->fetch(PDO::FETCH_ASSOC)) {
-                echo '<tr>';
-                $catName = getCatFromId($row['category_id']);
-                $catName = $catName->fetch(PDO::FETCH_ASSOC);
-                echo '<th scope="col">' . $catName['category_name'] . '</th>'; 
-                echo '<th scope="col">' . $row['transaction_date'] . '</th>';
-                echo '<th scope="col">' . $row['cost'] . '</th>'; 
-                echo '<th scope="col">' . $row['business_name'] . '</th>'; 
-                echo '</tr>';
-              }
-            ?>
-          </tbody>
-        </table>
+-->
 
 <form action="index.php" method="post">
   <?php if (isset($message)) 
