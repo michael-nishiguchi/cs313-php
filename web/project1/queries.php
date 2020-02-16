@@ -29,7 +29,7 @@ function login ($email, $password) {
     $id = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $stmt->closeCursor();
     //return $id['user_id'];
-    return $id['user_id'];
+    return $id;
 }
 
 function getAllUsers() {

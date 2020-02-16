@@ -38,14 +38,14 @@ switch ($action){
     case 'welcome':
         $inputEmail = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
         $inputPassword = filter_input(INPUT_POST, 'inputPassword', FILTER_SANITIZE_STRING);
-        $_SESSION['user_id'] = login($inputEmail, $inputPassword);
-        if($_SESSION['user_id'] != NULL) {
+        $_SESSION['user_data']['user_id'] = login($inputEmail, $inputPassword);
+        if($_SESSION['user_data']['user_id'] != NULL) {
             /*
             $message = null;
             $_SESSION['loggedin'] = true;
             include 'view-budget.php';
             */
-            $message = $_SESSION['user_id'];
+            $message = $_SESSION['user_data']['user_id'];
             include 'login.php';
             exit;
         }
