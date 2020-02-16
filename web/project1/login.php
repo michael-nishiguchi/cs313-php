@@ -15,7 +15,7 @@
     <?php
         if(isset($message)){
             //echo $message;
-            var_dump($message);
+            var_dump($message['user_id']);
         }
     ?>
 
