@@ -1,9 +1,11 @@
 <?php
 require_once 'queries.php';
   if ($_SESSION['loggedin']) {
+    /*
       $transactions = getTransactionsFromId($_SESSION('user_id'));
       $categories = getCategoriesFromId($_SESSION('user_id'));
     exit;
+    */
   } 
   else {
     include 'login.php';
