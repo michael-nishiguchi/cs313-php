@@ -41,13 +41,10 @@ switch ($action){
         $_SESSION['user_id'] = login($inputEmail, $inputPassword);
         $_SESSION['user_id'] = ($_SESSION['user_id'][0])['user_id'];
         if($_SESSION['user_id'] != NULL) {
-            /*
+            
             $message = null;
             $_SESSION['loggedin'] = true;
             include 'view-budget.php';
-            */
-            $message = $_SESSION['user_id'];
-            include 'login.php';
             exit;
         }
         else {
