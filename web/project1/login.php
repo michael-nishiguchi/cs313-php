@@ -30,8 +30,11 @@ $transactions = getAllTransactions();
     <input type="hidden" name="action" value="welcome">
 
     <form action="index.php" method="post">
-            <p class="center">or</p>
-        <input class="submit" type="submit" name="registration" value="registration">
+        <p class="center">or</p>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" data-kwimpalastatus="alive" data-kwimpalaid="1581817532009-4">
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
         <input type="hidden" name="action" value="register">
     </form>
 </form>
