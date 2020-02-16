@@ -37,7 +37,7 @@ var_dump($user_id);
     </thead>
     <tbody>
       <?php 
-      /*
+      
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
           echo '<th scope="col">' . $row['category_name'] . '</th>';
@@ -49,7 +49,7 @@ var_dump($user_id);
           echo '<th scope="col">' . $amountRemaining . '</th>'; 
           echo '</tr>';
         }
-        */
+        
         ?>
     </tbody>
   </table>
