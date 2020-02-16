@@ -28,7 +28,7 @@ function login ($email, $password) {
     $stmt->execute();
     $id = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $stmt->closeCursor();
-    return $id;
+    return $id[0];
 }
 
 function getAllUsers() {
