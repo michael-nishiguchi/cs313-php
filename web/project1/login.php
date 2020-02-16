@@ -15,7 +15,7 @@
     <?php
         if(isset($message)){
             //echo $message;
-            var_dump($message[0]);
+            var_dump($message);
         }
     ?>
 

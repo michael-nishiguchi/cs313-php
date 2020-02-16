@@ -39,7 +39,7 @@ switch ($action){
         $inputEmail = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
         $inputPassword = filter_input(INPUT_POST, 'inputPassword', FILTER_SANITIZE_STRING);
         $_SESSION['user_id'] = login($inputEmail, $inputPassword);
-        $_SESSION['user_id'] = $_SESSION['user_id'];
+        $_SESSION['user_id'] = $_SESSION['user_id'][0];
         if($_SESSION['user_id'] != NULL) {
             /*
             $message = null;
