@@ -42,6 +42,7 @@ $user_id = $_SESSION['user_id'];
     </thead>
     <tbody>
       <?php 
+      /*
         var_dump($categories->fetch(PDO::FETCH_ASSOC));
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           var_dump($row);
@@ -86,7 +87,7 @@ $user_id = $_SESSION['user_id'];
         echo '</tr>';
       }
       
-      
+      */
     ?>
   </tbody>
 </table>
