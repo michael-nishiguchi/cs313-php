@@ -3,8 +3,8 @@ require_once 'queries.php';
 $user_id = $_SESSION['user_id'];
   if ($_SESSION['loggedin'] == TRUE) {
     
+    $transactions = getTransactionsFromId($user_id);
     /*
-      $transactions = getTransactionsFromId($user_id);
       var_dump($transactions);
       $categories = getCategoriesFromId($user_id);   
       var_dump($categories);  
