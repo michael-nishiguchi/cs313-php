@@ -41,6 +41,7 @@ switch ($action){
         $user_id = login($inputEmail, $inputPassword);
         echo $inputEmail;
         echo $inputPassword;
+        echo 'Am I here???';
         sleep(5);
         var_dump($user_id);
         if($user_id != NULL) {
