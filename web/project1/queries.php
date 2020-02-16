@@ -78,4 +78,3 @@ function getCatFromId($category_id){
     return $stmt;
 }
 
-function get 
