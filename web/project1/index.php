@@ -44,9 +44,7 @@ switch ($action){
             
             $message = null;
             $_SESSION['loggedin'] = TRUE;
-            //include 'view-budget.php';
-            $message = $_SESSION['loggedin'];
-            include 'login.php';
+            include 'view-budget.php';
             exit;
         }
         else {
