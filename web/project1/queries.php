@@ -91,12 +91,12 @@ function getCatTotal($category_id) {
             WHERE category_id = (:category_id)';
     $stmt->bindValue(':category_id', $category_id, PDO::PARAM_STR);
     $stmt = $db->prepare($sql);
+    $stmt->execute();
     $catTotal;
 
-    while($row = $stmt->fetch(PDO:FETCH_ASSOC)) {
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $catTotal += $row['cost'];
     }
-    $stmt->execute();
     return $catTotal;
 }
 
