@@ -36,13 +36,12 @@ switch ($action){
     break;
 
     case 'welcome':
-        $inputEmail = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_STRING);
+        $inputEmail = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_EMAIL);
         $inputPassword = filter_input(INPUT_POST, 'inputPassword', FILTER_SANITIZE_STRING);
         $user_id = login($inputEmail, $inputPassword);
         echo $inputEmail;
         echo $inputPassword;
-        echo 'Am I here???';
-        sleep(5);
+
         var_dump($user_id);
         if($user_id != NULL) {
             $message = null;

@@ -27,9 +27,10 @@ $transactions = getAllTransactions();
 
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" data-kwimpalastatus="alive" data-kwimpalaid="1581817532009-4">
+    <input type="email" id="inputEmail" class="form-control" name="inputEmail" placeholder="Email address">
+
     <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" data-kwimpalastatus="alive" data-kwimpalaid="1581817532009-3">
+    <input type="password" id="inputPassword" class="form-control" name="inputPassword" placeholder="Password">
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     <input type="hidden" name="action" value="welcome">
