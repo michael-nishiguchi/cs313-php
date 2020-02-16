@@ -59,7 +59,7 @@ function getAllTransactions() {
     //$stmt->closeCursor();
     return $stmt;
 }
-/*
+
 function getCategoriesFromId($user_id) {
     $db = get_db();
     $sql = 'SELECT category_id, category_name, amount_budgeted 
@@ -100,7 +100,7 @@ function getCatTotal($category_id) {
     return $catTotal;
 }
 
-*/
+
 
 function sortTransactionsAsc() {
     $db = get_db();
