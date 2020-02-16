@@ -18,7 +18,7 @@ $transactions = getAllTransactions();
 </head>
 <body class="text-center">
 
-<form class="form-signin" action="index.php?welcome" method="post">
+<form class="form-signin" action="index.php" method="post">
     <?php
         if(isset($message)){
             echo $message;
