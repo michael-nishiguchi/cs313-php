@@ -43,7 +43,7 @@ switch ($action){
         if($_SESSION['user_id'] != NULL) {
             
             $message = null;
-            $_SESSION['loggedin'] = true;
+            $_SESSION['loggedin'] = TRUE;
             include 'view-budget.php';
             exit;
         }
