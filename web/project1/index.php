@@ -43,10 +43,12 @@ switch ($action){
         var_dump($user_id);
         if($user_id != NULL) {
             include 'welcome.php';
+            exit;
         }
         else {
             $message = "login failed";
             include 'login.php';
+            exit;
         }
 
     break;
