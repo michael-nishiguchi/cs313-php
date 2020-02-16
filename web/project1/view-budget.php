@@ -1,11 +1,11 @@
 <?php
 require_once 'queries.php';
 $user_id = $_SESSION['user_id'];
-echo $user_id;
-var_dump($_SESSION['loggedin']);
   if ($_SESSION['loggedin']) {
       $transactions = getTransactionsFromId($user_id);
-      $categories = getCategoriesFromId($user_id);     
+      var_dump($transactions);
+      $categories = getCategoriesFromId($user_id);   
+      var_dump($categories);  
     exit;
   } 
   else {
