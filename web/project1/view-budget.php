@@ -5,10 +5,10 @@ $user_id = $_SESSION['user_id'];
     
     $transactions = getTransactionsFromId($user_id);
     var_dump($transactions);
-    /*
+
       $categories = getCategoriesFromId($user_id);   
       var_dump($categories);  
-      */
+      
     exit;
   } 
   else {
@@ -41,7 +41,7 @@ $user_id = $_SESSION['user_id'];
     </thead>
     <tbody>
       <?php 
-      /*
+      
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
           echo '<th scope="col">' . $row['category_name'] . '</th>';
@@ -83,7 +83,7 @@ $user_id = $_SESSION['user_id'];
         echo '<th scope="col">' . $row['business_name'] . '</th>'; 
         echo '</tr>';
       }
-      */
+      
       
     ?>
   </tbody>
