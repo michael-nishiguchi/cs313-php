@@ -14,7 +14,8 @@
 <form class="form-signin" action="index.php" method="post">
     <?php
         if(isset($message)){
-            echo $message;
+            //echo $message;
+            var_dump($message);
         }
     ?>
 
