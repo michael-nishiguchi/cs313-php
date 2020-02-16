@@ -77,8 +77,8 @@ function getTransactionsFromId($user_id) {
     $sql = 'SELECT transaction_date, cost, business_name, category_id 
             FROM transactions
             WHERE user_id = (:user_id)';
-    $stmt->bindValue(':user_id', $user_id, PDO::PARAM_STR);
     $stmt = $db->prepare($sql);
+    $stmt->bindValue(':user_id', $user_id, PDO::PARAM_STR);
     $stmt->execute();
     //$stmt->closeCursor();
     return $stmt;
