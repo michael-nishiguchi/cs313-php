@@ -4,9 +4,8 @@ $user_id = $_SESSION['user_id'];
   if ($_SESSION['loggedin'] == TRUE) {
     
     $transactions = getTransactionsFromId($user_id);
-      $categories = getCategoriesFromId($user_id);   
-      var_dump($categories);  
-      
+    $categories = getCategoriesFromId($user_id);   
+ 
     exit;
   } 
   else {
@@ -39,7 +38,7 @@ $user_id = $_SESSION['user_id'];
     </thead>
     <tbody>
       <?php 
-      
+        var_dump($categories->fetch(PDO::FETCH_ASSOC));
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           var_dump($row);
           echo '<tr>';
