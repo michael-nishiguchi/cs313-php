@@ -6,10 +6,9 @@ require_once 'queries.php';
     exit;
   } 
   else {
-    inlude 'login.php';
+    include 'login.php';
     exit;
   }
-if()
 
 ?>
 
