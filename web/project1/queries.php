@@ -89,8 +89,8 @@ function getCatTotal($category_id) {
     $sql = 'SELECT cost 
             FROM transactions
             WHERE category_id = (:category_id)';
-    $stmt->bindValue(':category_id', $category_id, PDO::PARAM_STR);
     $stmt = $db->prepare($sql);
+    $stmt->bindValue(':category_id', $category_id, PDO::PARAM_STR);
     $stmt->execute();
     $catTotal;
 
