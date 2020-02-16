@@ -77,3 +77,5 @@ function getCatFromId($category_id){
     //$stmt->closeCursor();
     return $stmt;
 }
+
+function get 

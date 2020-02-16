@@ -31,6 +31,9 @@ switch ($action){
         include 'home.php';
     break;
 
+    case 'login':
+        include 'login.php';
+
     default:
         include 'home.php';
         break;

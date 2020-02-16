@@ -24,7 +24,7 @@ create TABLE transactions
 insert into users
     (user_name, email)
     VALUES (
-        'My username', 'mike@gmail.com'
+        'new user', 'asdfasdf@gmail.com'
 );
 
 insert into category
