@@ -60,6 +60,46 @@ function getAllTransactions() {
     return $stmt;
 }
 
+function getCategoriesFromId($user_id) {
+    $db = get_db();
+    $sql = 'SELECT category_id, category_name, amount_budgeted 
+            FROM category
+            WHERE user_id = (:user_id)';
+    $stmt->bindValue(':user_id', $user_id, PDO::PARAM_STR);
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    //$stmt->closeCursor();
+    return $stmt;
+}
+
+function getTransactionsFromId($user_id) {
+    $db = get_db();
+    $sql = 'SELECT transaction_date, cost, business_name, category_id 
+            FROM transactions
+            WHERE user_id = (:user_id)';
+    $stmt->bindValue(':user_id', $user_id, PDO::PARAM_STR);
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    //$stmt->closeCursor();
+    return $stmt;
+}
+
+function getCatTotal($category_id) {
+    $db = get_db();
+    $sql = 'SELECT cost 
+            FROM transactions
+            WHERE category_id = (:category_id)';
+    $stmt->bindValue(':category_id', $category_id, PDO::PARAM_STR);
+    $stmt = $db->prepare($sql);
+    $catTotal;
+
+    while($row = $stmt->fetch(PDO:FETCH_ASSOC) {
+        $catTotal += $row['cost'];
+    }
+    $stmt->execute();
+    return $catTotal;
+}
+
 function sortTransactionsAsc() {
     $db = get_db();
     $sql = 'SELECT transaction_date, cost, business_name, category_id 

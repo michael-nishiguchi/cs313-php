@@ -9,7 +9,8 @@ create TABLE category
 (
     category_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
     category_name varchar(255) UNIQUE NOT NULL,
-    amount_budgeted float NOT NULL
+    amount_budgeted float NOT NULL,
+    user_id int REFERENCES users (user_id)
 );
 
 create TABLE transactions
@@ -18,7 +19,9 @@ create TABLE transactions
     transaction_date date NOT NULL,
     cost float NOT NULL,
     business_name varchar(255) NOT NULL,
-    category_id int REFERENCES category (category_id)
+    category_id int REFERENCES category (category_id),
+    user_id int REFERENCES users (user_id)
+
 );
 
 insert into users
