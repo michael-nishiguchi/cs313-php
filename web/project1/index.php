@@ -45,6 +45,7 @@ switch ($action){
         }
         else {
             $message = "login failed";
+            include 'login.php';
         }
 
     break;
