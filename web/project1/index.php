@@ -41,6 +41,7 @@ switch ($action){
         $user_id = login($inputEmail, $inputPassword);
         var_dump($user_id);
         if($user_id != NULL) {
+            $message = null;
             include 'welcome.php';
             exit;
         }
