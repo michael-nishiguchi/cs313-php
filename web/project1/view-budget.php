@@ -2,7 +2,7 @@
 require_once 'queries.php';
 $user_id = $_SESSION['user_id'];
 echo $user_id;
-echo $_SESSION['logggedin'];
+var_dump($_SESSION['logggedin']);
   if ($_SESSION['loggedin']) {
       $transactions = getTransactionsFromId($user_id);
       $categories = getCategoriesFromId($user_id);     
