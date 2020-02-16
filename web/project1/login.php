@@ -1,5 +1,8 @@
 <?php
 require_once 'queries.php';
+$users = getAllUsers();
+$categories = getAllCategories();
+$transactions = getAllTransactions();
 ?>
 
 <!doctype html>
