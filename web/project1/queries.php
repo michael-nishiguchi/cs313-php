@@ -93,7 +93,7 @@ function getCatTotal($category_id) {
     $stmt = $db->prepare($sql);
     $catTotal;
 
-    while($row = $stmt->fetch(PDO:FETCH_ASSOC) {
+    while($row = $stmt->fetch(PDO:FETCH_ASSOC)) {
         $catTotal += $row['cost'];
     }
     $stmt->execute();
