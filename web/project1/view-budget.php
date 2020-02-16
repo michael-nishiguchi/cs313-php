@@ -35,6 +35,7 @@ require_once 'queries.php';
     </thead>
     <tbody>
       <?php 
+      /*
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
           echo '<th scope="col">' . $row['category_name'] . '</th>';
@@ -46,6 +47,7 @@ require_once 'queries.php';
           echo '<th scope="col">' . $amountRemaining . '</th>'; 
           echo '</tr>';
         }
+        */
         ?>
     </tbody>
   </table>
