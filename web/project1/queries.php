@@ -136,3 +136,5 @@ function getCatFromId($category_id){
     return $stmt;
 }
 
+echo 'here';
+
