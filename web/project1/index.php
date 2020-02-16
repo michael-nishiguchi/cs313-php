@@ -1,6 +1,6 @@
 <?php
 require_once 'queries.php';
-
+session_start();
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
