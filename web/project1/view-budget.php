@@ -41,6 +41,7 @@ $user_id = $_SESSION['user_id'];
       <?php 
       
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
+          var_dump($row);
           echo '<tr>';
           echo '<th scope="col">' . $row['category_name'] . '</th>';
           echo '<th scope="col">' . $row['amount_budgeted'] . '</th>';
