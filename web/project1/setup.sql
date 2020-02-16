@@ -1,7 +1,7 @@
 CREATE TABLE users
 (
     user_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
-    user_name varchar(255) UNIQUE NOT NULL,
+    password varchar(255) NOT NULL,
     email varchar(255) UNIQUE NOT NULL
 );
 
@@ -22,9 +22,9 @@ create TABLE transactions
 );
 
 insert into users
-    (user_name, email)
+    (password, email)
     VALUES (
-        'new user', 'asdfasdf@gmail.com'
+        'myPass', 'email@gmail.com'
 );
 
 insert into category

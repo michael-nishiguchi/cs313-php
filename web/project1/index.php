@@ -36,7 +36,16 @@ switch ($action){
     break;
 
     case 'welcome':
-        include 'welcom.php';
+        $inputEmail = filter_input(INPUT_POST, 'inputEmail', FILTER_SANITIZE_STRING);
+        $inputPassword = filter_input(INPUT_POST, 'inputPassword', FILTER_SANITIZE_STRING);
+        $user_id = login($inputEmail, $inputPassword);
+        if($user_id != NULL) {
+            include 'welcome.php';
+        }
+        else {
+            $message = "login failed";
+        }
+
     break;
 
     default:

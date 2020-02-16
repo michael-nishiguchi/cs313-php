@@ -19,6 +19,11 @@ $transactions = getAllTransactions();
 <body class="text-center">
 
 <form class="form-signin" action="index.php" method="post">
+    <?php
+        if(isset($message)){
+            echo $message;
+        }
+    ?>
 
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <label for="inputEmail" class="sr-only">Email address</label>

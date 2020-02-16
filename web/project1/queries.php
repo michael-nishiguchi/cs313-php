@@ -16,6 +16,21 @@ function addCategory($category_name, $amount_budgeted) {
     return $rowsChanged;
 }
 
+function login ($email, $password) {
+    $db = get_db();
+    $sql = 'SELECT user_id 
+            FROM users
+            WHERE email = (:email)
+            AND password = (:password)';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+    $stmt->bindValue(':password', $password, PDO::PARAM_STR);
+    $stmt->execute();
+    $id = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $id;
+}
+
 function getAllUsers() {
     $db = get_db();
     $sql = 'SELECT user_name, email FROM users';
