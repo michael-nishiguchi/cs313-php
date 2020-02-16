@@ -1,7 +1,7 @@
 <?php
 require_once 'queries.php';
 $user_id = $_SESSION['user_id'];
-var_dump($user_id);
+echo $user_id;
   if ($_SESSION['loggedin']) {
       $transactions = getTransactionsFromId($user_id);
       $categories = getCategoriesFromId($user_id);     
@@ -55,7 +55,7 @@ var_dump($user_id);
   </table>
 
 
-<!--
+
 
 <table class="table">
   <thead>
@@ -68,7 +68,7 @@ var_dump($user_id);
   </thead>
   <tbody>
     <?php 
-    /*
+    
       while ($row = $transactions->fetch(PDO::FETCH_ASSOC)) {
         echo '<tr>';
         $catName = getCatFromId($row['category_id']);
@@ -79,12 +79,12 @@ var_dump($user_id);
         echo '<th scope="col">' . $row['business_name'] . '</th>'; 
         echo '</tr>';
       }
-      */
+      
     ?>
   </tbody>
 </table>
 
--->
+
 
 <form action="index.php" method="post">
   <?php if (isset($message)) 
