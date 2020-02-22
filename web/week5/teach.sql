@@ -6,10 +6,33 @@ create TABLE Scriptures (
     content text NOT NULL
 );
 
+create TABLE topic (
+    id SERIAL UNIQUE NOT NULL PRIMARY KEY,
+    topic_name varchar(255) NOT NULL
+);
+
+create table link (
+    id SERIAL UNIQUE NOT NULL PRIMARY KEY,
+    scripture_id integer REFERENCES Scriptures (id),
+    topic_id integer REFERENCES topic (id) 
+);
+
+insert into topic (topic_name)
+    values ('Faith');
+
+insert into topic (topic_name)
+    values ('Sacrifice');
+
+insert into topic (topic_name)
+    values ('Charity');
+
+
+
+
 insert into Scriptures
     (book, chapter, verse, content)
     VALUES (
-        'John 1', 1, 5, 'And the alight shineth in darkness; and the darkness comprehended it not.'
+        'John 1', 1, 5, 'And the light shineth in darkness; and the darkness comprehended it not.'
 );
 
 insert into Scriptures

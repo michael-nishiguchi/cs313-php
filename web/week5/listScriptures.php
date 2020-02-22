@@ -99,9 +99,9 @@
         echo "<tr><td>" . $script['book'] . "</td>";
         echo "<td>" . $script['chapter'] . ":" . $script['verse'] . "</td>";
         echo "<td>" . $script['content'] . "</td>";
-         $topicIds = getTopicId($script["id"]);
-         echo "<td>";
-         foreach ($topicIds as $topicId) {
+        $topicIds = getTopicId($script["id"]);
+        echo "<td>";
+        foreach ($topicIds as $topicId) {
            echo getTopicName($topicId) . " ";
          }
          echo "</td></tr>";
