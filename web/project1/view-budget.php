@@ -49,23 +49,28 @@ require_once 'queries.php';
           //
           //
           //GET CATEGORY 
-          $total = getCatTotal($row['category_id']);
+          //$total = getCatTotal($row['category_id']);
           //var_dump($total);
+          /*
           $catTotal;
           while($newRow = $total->fetch(PDO::FETCH_ASSOC)) {
             var_dump($newRow);
             $catTotal += $newRow['cost'];
             echo $catTotal;
           }
+          */
+
           
-          //$catTotal =  getCatTotal($row['category_id']);
+          $catTotal =  getCatTotal($row['category_id']);
 //
 //
 //
 //
 //
-$amountRemaining = 0;
-          //$amountRemaining = ($row['amount_budgetd'] - $catTotal);
+          $amountRemaining = 0;
+          $amountRemaining = ($row['amount_budgetd'] - $catTotal);
+          var_dump($amountRemaining);
+          var_dump($catTotal);
           echo '<th scope="col">' . $amountRemaining . '</th>'; 
           echo '</tr>';
         }
