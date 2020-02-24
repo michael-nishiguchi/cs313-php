@@ -46,25 +46,13 @@ require_once 'queries.php';
 
           //call modal
           ?>
-          <td scope="col"><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Delete</button></td>
+          <td scope="col"><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button></td>
 
           
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
             <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                You are about to delete ' . ucfirst($row['category_name']) . ' is that okay?
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Go Back</button>
-                <button type="button" class="btn btn-Danger">Delete</button>
-              </div>
+              ...
             </div>
           </div>
         </div>
