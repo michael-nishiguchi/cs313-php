@@ -43,31 +43,7 @@ require_once 'queries.php';
           echo '<th scope="col">' . $row['amount_budgeted'] . '</th>';
 
           //get total 
-          //
-          //
-          //
-          //
-          //
-          //GET CATEGORY 
-          //$total = getCatTotal($row['category_id']);
-          //var_dump($total);
-          /*
-          $catTotal;
-          while($newRow = $total->fetch(PDO::FETCH_ASSOC)) {
-            var_dump($newRow);
-            $catTotal += $newRow['cost'];
-            echo $catTotal;
-          }
-          */
-          echo $row['category_id'];
-
-          /*
           $catTotal =  getCatTotal($row['category_id']);
-//
-//
-//
-//
-//
           $amountRemaining = 0;
           $amountRemaining = ($row['amount_budgetd'] - $catTotal);
           var_dump($amountRemaining);
@@ -75,7 +51,7 @@ require_once 'queries.php';
           echo '<th scope="col">' . $amountRemaining . '</th>'; 
           echo '</tr>';
 
-          */
+          
         }
         
         
