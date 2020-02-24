@@ -35,10 +35,10 @@ require_once 'queries.php';
       <?php 
       
         //var_dump($categories->fetch(PDO::FETCH_ASSOC));
-        //$toPrint = $categories->fetchAll(PDO::FETCH_ASSOC);
-while($row = $categories->fetch(PDO::FETCH_ASSOC)) {
-var_dump($row);
-}
+        $toPrint = $categories->fetchAll(PDO::FETCH_ASSOC);
+        while($row = $categories->fetch(PDO::FETCH_ASSOC)) {
+        var_dump($row);
+        }
         var_dump($toPrint);
         /*
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
