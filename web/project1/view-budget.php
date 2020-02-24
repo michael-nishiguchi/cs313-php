@@ -29,6 +29,7 @@ require_once 'queries.php';
     <thead>
       <tr>
         <th scope="col">Category</th>
+        <th scope="col">Actions</th>
         <th scope="col">Amount Budgeted</th>
         <th scope="col">Amount Remaining</th>
       </tr>
@@ -41,6 +42,7 @@ require_once 'queries.php';
           echo '<tr>';
           echo '<td scope="col">' . ucfirst($row['category_name']) . '</d>';
           echo '<td scope="col">' . $row['amount_budgeted'] . '</td>';
+          echo '<td scope="cole"><i class="far fa-edit"></i>';
           //get total 
           $catTotal =  getCatTotal($row['category_id']);
           $amountRemaining = $row['amount_budgeted'] - $catTotal;
