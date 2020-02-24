@@ -4,7 +4,7 @@ require_once 'queries.php';
     
     $transactions = getTransactionsFromId($_SESSION['user_id']);
     
-    while($row = $transactions->fetchAll(PDO::FETCH_ASSOC){
+    while($row = $transactions->fetch(PDO::FETCH_ASSOC){
       var_dump($row);
     }
     
