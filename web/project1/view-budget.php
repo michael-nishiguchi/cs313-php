@@ -33,10 +33,9 @@ require_once 'queries.php';
     </thead>
     <tbody>
       <?php 
-      /*
+      
         var_dump($categories->fetch(PDO::FETCH_ASSOC));
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
-          var_dump($row);
           echo '<tr>';
           echo '<th scope="col">' . $row['category_name'] . '</th>';
           echo '<th scope="col">' . $row['amount_budgeted'] . '</th>';
@@ -48,7 +47,7 @@ require_once 'queries.php';
           echo '</tr>';
         }
         
-        */
+        
         ?>
     </tbody>
   </table>
