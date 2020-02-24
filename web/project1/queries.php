@@ -78,7 +78,7 @@ function getTransactionsFromId($user_id) {
             FROM transactions
             WHERE user_id = (:user_id)';
     $stmt = $db->prepare($sql);
-    $stmt->bindValue(':user_id', $user_id, PDO::PARAM_STR);
+    $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
     $stmt->execute();
     //$stmt->closeCursor();
     return $stmt;
