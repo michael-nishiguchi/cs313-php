@@ -46,6 +46,7 @@ require_once 'queries.php';
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
           echo '<td scope="col">' . ucfirst($row['category_name']) . '</td>';
+          echo $row['category_id']
           ?>
           <!--modal call -->
           <td scope="col">
