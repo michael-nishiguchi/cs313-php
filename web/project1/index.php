@@ -19,6 +19,8 @@ switch ($action){
         $message = 'not added';
         include 'test.php';
         break;
+    case 'delete-cat':
+        
 
     case 'show-cat':
         break;
@@ -40,8 +42,7 @@ switch ($action){
         $inputPassword = filter_input(INPUT_POST, 'inputPassword', FILTER_SANITIZE_STRING);
         $_SESSION['user_id'] = login($inputEmail, $inputPassword);
         $_SESSION['user_id'] = ($_SESSION['user_id'][0])['user_id'];
-        if($_SESSION['user_id'] != NULL) {
-            
+        if($_SESSION['user_id'] != NULL) {            
             $message = null;
             $_SESSION['loggedin'] = TRUE;
             include 'view-budget.php';

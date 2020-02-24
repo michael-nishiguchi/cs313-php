@@ -42,29 +42,35 @@ require_once 'queries.php';
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
           echo '<td scope="col">' . ucfirst($row['category_name']) . '</td>';
+          $_SESSION['category_id'] = $row['category_id'];
           ?>
           <!--modal call -->
           <td scope="col">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".viewModal">View</button>
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".deleteModal">Delete</button>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".viewModal">View</button>
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".deleteModal">Delete</button>
+            </div>
           </td>
 
           <div class=" modal deleteModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
+                <form action="index.php" metho="post">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Delete Category</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Would you like to delete this category?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" type="submit">Delete</button>
+                    <input type="hidden" name="action" value="delete-cat">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
