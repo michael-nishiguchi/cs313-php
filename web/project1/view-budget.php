@@ -2,8 +2,8 @@
 
 require_once 'queries.php';
   if ($_SESSION['loggedin'] == TRUE) {
-    //$transactions = getTransactionsFromId($_SESSION['user_id']);
-    //$categories = getCategoriesFromId($_SESSION['user_id']);
+    $transactions = getTransactionsFromId($_SESSION['user_id']);
+    $categories = getCategoriesFromId($_SESSION['user_id']);
   } 
   else {
     include 'login.php';
@@ -74,6 +74,7 @@ require_once 'queries.php';
           var_dump($catTotal);
           echo '<th scope="col">' . $amountRemaining . '</th>'; 
           echo '</tr>';
+
           */
         }
         
