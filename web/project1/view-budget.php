@@ -46,7 +46,7 @@ require_once 'queries.php';
           $catTotal =  getCatTotal($row['category_id']);
           $amountRemaining = $row['amount_budgeted'] - $catTotal;
 
-          echo ("Remaning: " . $amountRemaining;
+          echo ("Remaning: " . $amountRemaining);
           $amountRemaining = ($row['amount_budgetd'] - $catTotal);
           echo '<th scope="col">' . $amountRemaining . '</th>'; 
           echo '</tr>';
