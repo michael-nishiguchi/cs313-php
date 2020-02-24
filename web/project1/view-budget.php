@@ -47,7 +47,7 @@ require_once 'queries.php';
           echo '<tr>';
           echo '<td scope="col">' . ucfirst($row['category_name']) . '</td>';
           echo $row['category_id'];
-
+          $catId = $row['category_id'];
           echo '
           <td scope="col">
             <div class="btn-group" role="group">
@@ -68,10 +68,10 @@ require_once 'queries.php';
                   </div>
                   <div class="modal-body">
 
-                    <p>Would you like to delete this category?' . $row['category_id'] ' </p>
+                    <p>Would you like to delete this category?' . $catId . ' </p>
                   </div>
                   <div class="modal-footer">
-                    <input type="hidden" id="category-id" value="' .  $row['category_id'] . '" name="category-id">
+                    <input type="hidden" id="category-id" value="' .  $catId . '" name="category-id">
                     <button class="btn btn-danger" type="submit">Delete</button>
                     <input type="hidden" name="action" value="delete-cat">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
