@@ -48,6 +48,7 @@ require_once 'queries.php';
           echo '<td scope="col">' . ucfirst($row['category_name']) . '</td>';
           $_SESSION['category_id'] = $row['category_id'];
           $_SESSION['category_name'] = $row['category_name'];
+          echo $_SESSION['category_name'];
           ?>
           <!--modal call -->
           <td scope="col">
