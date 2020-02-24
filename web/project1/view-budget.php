@@ -3,6 +3,7 @@ require_once 'queries.php';
   if ($_SESSION['loggedin'] == TRUE) {
     $transactions = getTransactionsFromId($_SESSION['user_id']);
     $categories = getCategoriesFromId($user_id);
+    var_dump($categories);
   } 
   else {
     include 'login.php';
