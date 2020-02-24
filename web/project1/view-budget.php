@@ -3,7 +3,6 @@ require_once 'queries.php';
   if ($_SESSION['loggedin'] == TRUE) {
     $transactions = getTransactionsFromId($_SESSION['user_id']);
     $categories = getCategoriesFromId($user_id);
-    var_dump($categories);
   } 
   else {
     include 'login.php';
@@ -35,7 +34,10 @@ require_once 'queries.php';
     <tbody>
       <?php 
       
-        var_dump($categories->fetch(PDO::FETCH_ASSOC));
+        //var_dump($categories->fetch(PDO::FETCH_ASSOC));
+        $toPrint = $categories->fetchAll(PDO::FETCH_ASSOC);
+        var_dump($toPrint);
+        /*
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
           echo '<th scope="col">' . $row['category_name'] . '</th>';
@@ -48,7 +50,7 @@ require_once 'queries.php';
           echo '</tr>';
         }
         
-        
+        */
         ?>
     </tbody>
   </table>
