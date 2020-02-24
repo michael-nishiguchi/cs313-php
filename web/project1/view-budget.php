@@ -47,8 +47,7 @@ require_once 'queries.php';
           echo '<tr>';
           echo '<td scope="col">' . ucfirst($row['category_name']) . '</td>';
           echo $row['category_id'];
-          
-          <!--modal call -->
+
           echo '
           <td scope="col">
             <div class="btn-group" role="group">
