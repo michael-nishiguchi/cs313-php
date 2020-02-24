@@ -1,4 +1,5 @@
 <?php
+/*
 require_once 'queries.php';
   if ($_SESSION['loggedin'] == TRUE) {
     //$transactions = getTransactionsFromId($_SESSION['user_id']);
@@ -8,6 +9,7 @@ require_once 'queries.php';
     include 'login.php';
     exit;
   }
+  */
 ?>
 
 <!doctype html>
