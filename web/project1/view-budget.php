@@ -34,6 +34,7 @@ require_once 'queries.php';
     <tbody>
       <?php 
 
+/*
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
           echo '<th scope="col">' . $row['category_name'] . '</th>';
@@ -49,12 +50,12 @@ require_once 'queries.php';
           //$total = getCatTotal($row['cost']);
           //var_dump($total);
           $catTotal;
-          /*
+          
           while($newRow = $total->fetch(PDO::FETCH_ASSOC)) {
             $catTotal += $newRow['cost'];
             echo $catTotal;
           }
-          */
+          
           //$catTotal =  getCatTotal($row['category_id']);
 //
 //
@@ -67,7 +68,7 @@ $amountRemaining = 0;
           echo '</tr>';
         }
         
-        
+        */
         ?>
     </tbody>
   </table>
