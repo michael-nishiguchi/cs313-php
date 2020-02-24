@@ -49,7 +49,7 @@ require_once 'queries.php';
           //
           //
           //GET CATEGORY 
-          $total = getCatTotal($row['cost']);
+          $total = getCatTotal($row['category_id']);
           //var_dump($total);
           $catTotal;
           while($newRow = $total->fetch(PDO::FETCH_ASSOC)) {
