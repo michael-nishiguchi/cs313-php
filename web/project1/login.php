@@ -14,7 +14,6 @@
 <form class="form-signin" action="index.php" method="post">
     <?php
         if(isset($message)){
-            var_dump($_SESSION['user_id']);
             echo $message;
         }
     ?>

@@ -27,7 +27,6 @@ require_once 'queries.php';
 <body>
 <?php
         if(isset($message)){
-            var_dump($_SESSION['user_id']);
             echo $message;
         }
     ?>
@@ -48,6 +47,7 @@ require_once 'queries.php';
           echo '<tr>';
           echo '<td scope="col">' . ucfirst($row['category_name']) . '</td>';
           $_SESSION['category_id'] = $row['category_id'];
+          $_SESSION['category_name'] = $row['category_name'];
           ?>
           <!--modal call -->
           <td scope="col">

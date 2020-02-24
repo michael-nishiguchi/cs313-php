@@ -20,7 +20,7 @@ switch ($action){
         include 'test.php';
         break;
     case 'delete-cat':
-        $message = "Category was deleted";
+        $message = $_SESSION['category_name'] . " was deleted";
         include 'view-budget.php';
 
     case 'show-cat':
