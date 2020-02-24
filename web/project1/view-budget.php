@@ -1,5 +1,5 @@
 <?php
-/*
+
 require_once 'queries.php';
   if ($_SESSION['loggedin'] == TRUE) {
     //$transactions = getTransactionsFromId($_SESSION['user_id']);
@@ -9,7 +9,7 @@ require_once 'queries.php';
     include 'login.php';
     exit;
   }
-  */
+  
 ?>
 
 <!doctype html>
@@ -36,24 +36,24 @@ require_once 'queries.php';
     <tbody>
       <?php 
 
-/*
+
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
           echo '<th scope="col">' . $row['category_name'] . '</th>';
           echo '<th scope="col">' . $row['amount_budgeted'] . '</th>';
 
           //get total 
-//
-//
-//
-//
-//
+          //
+          //
+          //
+          //
+          //
           //GET CATEGORY 
-          //$total = getCatTotal($row['cost']);
+          $total = getCatTotal($row['cost']);
           //var_dump($total);
           $catTotal;
-          
           while($newRow = $total->fetch(PDO::FETCH_ASSOC)) {
+            var_dump($newRow);
             $catTotal += $newRow['cost'];
             echo $catTotal;
           }
@@ -70,7 +70,7 @@ $amountRemaining = 0;
           echo '</tr>';
         }
         
-        */
+        
         ?>
     </tbody>
   </table>
