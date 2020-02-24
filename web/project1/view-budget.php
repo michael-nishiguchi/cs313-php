@@ -1,24 +1,13 @@
 <?php
 require_once 'queries.php';
   if ($_SESSION['loggedin'] == TRUE) {
-    
     $transactions = getTransactionsFromId($_SESSION['user_id']);
-    
-    while($row = $transactions->fetch(PDO::FETCH_ASSOC)){
-      var_dump($row);
-    }
-    
-    var_dump($transactions);
-
-    //$categories = getCategoriesFromId($user_id);
-
-    exit;
+    $categories = getCategoriesFromId($user_id);
   } 
   else {
     include 'login.php';
     exit;
   }
-
 ?>
 
 <!doctype html>
@@ -59,6 +48,7 @@ require_once 'queries.php';
           echo '</tr>';
         }
         
+        */
         ?>
     </tbody>
   </table>
@@ -77,7 +67,7 @@ require_once 'queries.php';
   </thead>
   <tbody>
     <?php 
-    
+    /*
       while ($row = $transactions->fetch(PDO::FETCH_ASSOC)) {
         echo '<tr>';
         $catName = getCatFromId($row['category_id']);
@@ -88,7 +78,6 @@ require_once 'queries.php';
         echo '<th scope="col">' . $row['business_name'] . '</th>'; 
         echo '</tr>';
       }
-      
       */
     ?>
   </tbody>
