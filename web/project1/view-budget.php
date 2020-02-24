@@ -1,15 +1,15 @@
 <?php
 require_once 'queries.php';
-$user_id = $_SESSION['user_id'];
   if ($_SESSION['loggedin'] == TRUE) {
-    
+    echo $_SESSION['user_id'];
+    /*
     $transactions = getTransactionsFromId($user_id);
     while($row = $transactions->fetchAll(PDO::FETCH_ASSOC){
       var_dump($row);
     }
     var_dump($transactions);
     $categories = getCategoriesFromId($user_id);
- 
+ */
     exit;
   } 
   else {
