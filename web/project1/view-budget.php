@@ -41,9 +41,36 @@ require_once 'queries.php';
 
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
-          echo '<td scope="col">' . ucfirst($row['category_name']) . '</d>';
+          echo '<td scope="col">' . ucfirst($row['category_name']) . '</td>';
+          //echo '<td scope="cole"><i class="far fa-edit"></i><i class="far fa-trash-alt"></i></td>';
+
+          //call modal
+          echo '<td scope="col"><button type="button" class="btn btn-danger" data-toggle="modal" data-target="deleteModal">Delete</button>';
+
+          //modal
+          echo '
+          <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                You are about to delete ' . ucfirst($row['category_name']) . ' is that okay?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Go Back</button>
+                <button type="button" class="btn btn-Danger">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+';
+
           echo '<td scope="col">' . $row['amount_budgeted'] . '</td>';
-          echo '<td scope="cole"><i class="far fa-edit"></i>';
           //get total 
           $catTotal =  getCatTotal($row['category_id']);
           $amountRemaining = $row['amount_budgeted'] - $catTotal;
