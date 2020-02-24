@@ -64,7 +64,7 @@ function getCategoriesFromId($user_id) {
     $db = get_db();
     $sql = 'SELECT category_id, category_name, amount_budgeted 
             FROM category
-            WHERE user_id = 1';
+            WHERE user_id = (:user_id)';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
     $stmt->execute();
