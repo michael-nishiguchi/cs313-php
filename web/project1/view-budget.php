@@ -39,12 +39,12 @@ require_once 'queries.php';
 
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
-          echo '<td scope="col">' . uswords($row['category_name']) . '</td>';
-          echo '<td scope="col">' . $row['amount_budgeted'] . '</td>';
+          echo '<th scope="col">' . uswords($row['category_name']) . '</th>';
+          echo '<th scope="col">' . $row['amount_budgeted'] . '</th>';
           //get total 
           $catTotal =  getCatTotal($row['category_id']);
           $amountRemaining = $row['amount_budgeted'] - $catTotal;
-          echo '<td scope="col">' . $amountRemaining . '</td>'; 
+          echo '<th scope="col">' . $amountRemaining . '</th>'; 
           echo '</tr>';       
         }
         
