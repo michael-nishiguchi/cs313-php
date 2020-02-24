@@ -59,6 +59,7 @@ require_once 'queries.php';
             echo $catTotal;
           }
           */
+          echo $row['category_id'];
 
           
           $catTotal =  getCatTotal($row['category_id']);
