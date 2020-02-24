@@ -46,9 +46,6 @@ require_once 'queries.php';
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
           echo '<td scope="col">' . ucfirst($row['category_name']) . '</td>';
-          $_SESSION['category_id'] = $row['category_id'];
-          $_SESSION['category_name'] = $row['category_name'];
-          echo $_SESSION['category_name'];
           ?>
           <!--modal call -->
           <td scope="col">
@@ -72,6 +69,7 @@ require_once 'queries.php';
                     <p>Would you like to delete this category?</p>
                   </div>
                   <div class="modal-footer">
+                    <input type="hidden" id="category-id" value="<?php $row['category_id'];?>" name="category-id">
                     <button class="btn btn-danger" type="submit">Delete</button>
                     <input type="hidden" name="action" value="delete-cat">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

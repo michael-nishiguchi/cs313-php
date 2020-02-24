@@ -20,7 +20,8 @@ switch ($action){
         include 'test.php';
         break;
     case 'delete-cat':
-        $message = $_SESSION['category_name'] . " was deleted";
+        $categoryId = filter_input(INPUT_POST, 'category-id', FILTER_SANITIZE_STRING);
+        $message = $categoryId . " was deleted";
         include 'view-budget.php';
 
     case 'show-cat':
