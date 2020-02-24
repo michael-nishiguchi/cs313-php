@@ -28,7 +28,7 @@ require_once 'queries.php';
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Category Name</th>
+        <th scope="col">Category</th>
         <th scope="col">Amount Budgeted</th>
         <th scope="col">Amount Remaining</th>
       </tr>
@@ -39,12 +39,12 @@ require_once 'queries.php';
 
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
-          echo '<th scope="col">' . ucfirst($row['category_name']) . '</th>';
-          echo '<th scope="col">' . $row['amount_budgeted'] . '</th>';
+          echo '<td scope="col">' . ucfirst($row['category_name']) . '</d>';
+          echo '<td scope="col">' . $row['amount_budgeted'] . '</td>';
           //get total 
           $catTotal =  getCatTotal($row['category_id']);
           $amountRemaining = $row['amount_budgeted'] - $catTotal;
-          echo '<th scope="col">' . $amountRemaining . '</th>'; 
+          echo '<td scope="col">' . $amountRemaining . '</td>'; 
           echo '</tr>';       
         }
         
