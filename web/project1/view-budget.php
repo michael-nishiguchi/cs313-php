@@ -46,8 +46,8 @@ require_once 'queries.php';
 //
 //
           //GET CATEGORY 
-          $total = getCatTotal($row['cost']);
-          var_dump($total);
+          //$total = getCatTotal($row['cost']);
+          //var_dump($total);
           $catTotal;
           /*
           while($newRow = $total->fetch(PDO::FETCH_ASSOC)) {
@@ -61,7 +61,8 @@ require_once 'queries.php';
 //
 //
 //
-          $amountRemaining = ($row['amount_budgetd'] - $catTotal);
+$amountRemaining = 0;
+          //$amountRemaining = ($row['amount_budgetd'] - $catTotal);
           echo '<th scope="col">' . $amountRemaining . '</th>'; 
           echo '</tr>';
         }
