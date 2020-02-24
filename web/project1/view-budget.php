@@ -81,23 +81,7 @@ require_once 'queries.php';
               </div>
             </div>
           </div>
-          <!--
-          <div class="modal fade viewModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                View modal
-              </div>
-            </div>
-          </div>
-          -->
-          <div class="modal fade deleteModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                Delete modal
-              </div>
-            </div>
-          </div>
-<?php
+';
 
           echo '<td scope="col">' . $row['amount_budgeted'] . '</td>';
           //get total 
@@ -106,7 +90,7 @@ require_once 'queries.php';
           echo '<td scope="col">' . $amountRemaining . '</td>'; 
           echo '</tr>';       
         }
-        ';
+        
         
         ?>
     </tbody>
