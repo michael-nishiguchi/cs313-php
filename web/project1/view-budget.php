@@ -37,9 +37,9 @@ require_once 'queries.php';
         //var_dump($categories->fetch(PDO::FETCH_ASSOC));
         $fetchallprint = $categories->fetchAll(PDO::FETCH_ASSOC);
         while($row = $categories->fetch(PDO::FETCH_ASSOC)) {
-       // var_dump($row);
+        var_dump($row);
         }
-        var_dump($fetchallprint);
+        //var_dump($fetchallprint);
         /*
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
