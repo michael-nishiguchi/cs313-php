@@ -28,7 +28,7 @@ require_once 'queries.php';
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Category</th>
+        <th scope="col">Category Name</th>
         <th scope="col">Amount Budgeted</th>
         <th scope="col">Amount Remaining</th>
       </tr>
@@ -39,7 +39,7 @@ require_once 'queries.php';
 
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
-          echo '<th scope="col">' . uswords($row['category_name']) . '</th>';
+          echo '<th scope="col">' . ucfirst($row['category_name']) . '</th>';
           echo '<th scope="col">' . $row['amount_budgeted'] . '</th>';
           //get total 
           $catTotal =  getCatTotal($row['category_id']);
