@@ -47,8 +47,9 @@ require_once 'queries.php';
           echo '<tr>';
           echo '<td scope="col">' . ucfirst($row['category_name']) . '</td>';
           echo $row['category_id'];
-          ?>
+          
           <!--modal call -->
+          echo '
           <td scope="col">
             <div class="btn-group" role="group">
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".viewModal">View</button>
@@ -68,10 +69,10 @@ require_once 'queries.php';
                   </div>
                   <div class="modal-body">
 
-                    <p>Would you like to delete this category? <?php echo $row['category_id'];?></p>
+                    <p>Would you like to delete this category?' . $row['category_id'] ' </p>
                   </div>
                   <div class="modal-footer">
-                    <input type="hidden" id="category-id" value="<?php $row['category_id'];?>" name="category-id">
+                    <input type="hidden" id="category-id" value="' .  $row['category_id'] . '" name="category-id">
                     <button class="btn btn-danger" type="submit">Delete</button>
                     <input type="hidden" name="action" value="delete-cat">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -105,7 +106,7 @@ require_once 'queries.php';
           echo '<td scope="col">' . $amountRemaining . '</td>'; 
           echo '</tr>';       
         }
-        
+        ';
         
         ?>
     </tbody>
