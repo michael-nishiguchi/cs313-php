@@ -42,20 +42,27 @@ require_once 'queries.php';
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
           echo '<td scope="col">' . ucfirst($row['category_name']) . '</td>';
-          //echo '<td scope="cole"><i class="far fa-edit"></i><i class="far fa-trash-alt"></i></td>';
-
-          //call modal
           ?>
-          <td scope="col"><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button></td>
-
+          <!--modal call -->
+          <td scope="col">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".viewModal">View</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".deleteModal">Delete</button>
+          </td>
           
-          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              ...
+          <div class="modal fade viewModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                View modal
+              </div>
             </div>
           </div>
-        </div>
+          <div class="modal fade deleteModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                Delete modal
+              </div>
+            </div>
+          </div>
 <?php
 
           echo '<td scope="col">' . $row['amount_budgeted'] . '</td>';
@@ -73,33 +80,6 @@ require_once 'queries.php';
 
 
 
-
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Category</th>
-      <th scope="col">Transaction Date</th>
-      <th scope="col">Cost</th>
-      <th scope="col">Business Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php 
-    /*
-      while ($row = $transactions->fetch(PDO::FETCH_ASSOC)) {
-        echo '<tr>';
-        $catName = getCatFromId($row['category_id']);
-        $catName = $catName->fetch(PDO::FETCH_ASSOC);
-        echo '<th scope="col">' . $catName['category_name'] . '</th>'; 
-        echo '<th scope="col">' . $row['transaction_date'] . '</th>';
-        echo '<th scope="col">' . $row['cost'] . '</th>'; 
-        echo '<th scope="col">' . $row['business_name'] . '</th>'; 
-        echo '</tr>';
-      }
-      */
-    ?>
-  </tbody>
-</table>
 
 
 
