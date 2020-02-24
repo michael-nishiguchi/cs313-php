@@ -66,7 +66,8 @@ require_once 'queries.php';
                     </button>
                   </div>
                   <div class="modal-body">
-                    <p>Would you like to delete this category?</p>
+
+                    <p>Would you like to delete this category? <?php $row['category_id'];?></p>
                   </div>
                   <div class="modal-footer">
                     <input type="hidden" id="category-id" value="<?php $row['category_id'];?>" name="category-id">
