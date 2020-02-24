@@ -33,14 +33,7 @@ require_once 'queries.php';
     </thead>
     <tbody>
       <?php 
-      
-        //var_dump($categories->fetch(PDO::FETCH_ASSOC));
-        $fetchallprint = $categories->fetchAll(PDO::FETCH_ASSOC);
-        while($row = $categories->fetch(PDO::FETCH_ASSOC)) {
-        var_dump($row);
-        }
-        //var_dump($fetchallprint);
-        /*
+
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
           echo '<tr>';
           echo '<th scope="col">' . $row['category_name'] . '</th>';
@@ -53,7 +46,7 @@ require_once 'queries.php';
           echo '</tr>';
         }
         
-        */
+        
         ?>
     </tbody>
   </table>
