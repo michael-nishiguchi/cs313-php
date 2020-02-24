@@ -61,7 +61,7 @@ require_once 'queries.php';
           */
           echo $row['category_id'];
 
-          
+          /*
           $catTotal =  getCatTotal($row['category_id']);
 //
 //
@@ -74,6 +74,7 @@ require_once 'queries.php';
           var_dump($catTotal);
           echo '<th scope="col">' . $amountRemaining . '</th>'; 
           echo '</tr>';
+          */
         }
         
         
