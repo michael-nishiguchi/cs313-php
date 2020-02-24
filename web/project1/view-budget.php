@@ -45,11 +45,11 @@ require_once 'queries.php';
           //echo '<td scope="cole"><i class="far fa-edit"></i><i class="far fa-trash-alt"></i></td>';
 
           //call modal
-          echo '<td scope="col"><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Delete</button></td>';
+          echo '<td scope="col"><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Delete</button></td>';
 
           //modal
           echo '
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header">
