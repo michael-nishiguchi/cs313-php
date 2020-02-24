@@ -18,7 +18,9 @@ require_once 'queries.php';
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="main.js"></script>
@@ -46,52 +48,16 @@ require_once 'queries.php';
 
           //call modal
           ?>
-          <td scope="col"><button class="btn btn-default" data-toggle="modal" data-target="#help">
-  <img src="img/help.png" alt="" class="img-circle">
-</button></td>
+          <td scope="col"><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button></td>
 
           
-<div id="settings" class="modal fade" role="dialog">
-  <div class="modal-dialog" >
-
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title">Settings</h3>
-      </div>
-      <div class="modal-body">
-        <h4> Tethering</h4>
-        <label>Name:</label>
-        <input type="text" id="wlanName" size="15">
-        <label>Passphrase:</label>
-        <input type="text" id="passPhrase" size="15">
-        <br>
-        <br>
-        <button type="button" class="btn btn-success" onclick="enableTethering()">Enable tethering</button>
-        <button type="button" class="btn btn-danger" onclick="disableTethering()">Disable tethering</button>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-  <div id="help" class="modal fade" role="dialog">
-    <div class="modal-dialog" >
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title">Help</h3>
+          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              ...
+            </div>
+          </div>
         </div>
-        <div class="modal-body">
-          *CONTENT TO BE MADE*
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-    </div>
 <?php
 
           echo '<td scope="col">' . $row['amount_budgeted'] . '</td>';
