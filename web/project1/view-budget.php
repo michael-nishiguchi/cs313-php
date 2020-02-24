@@ -35,12 +35,14 @@ require_once 'queries.php';
       <?php 
 
         while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
+          var_dump("This is the row" . $row);
           echo '<tr>';
           echo '<th scope="col">' . $row['category_name'] . '</th>';
           echo '<th scope="col">' . $row['amount_budgeted'] . '</th>';
 
           //get total 
           $catTotal =  getCatTotal($row['category_id']);
+          var_dump("This is the cat total" . $catTotal);
           $amountRemaining = $row['amount_budgetd'] - $catTotal;
           echo '<th scope="col">' . $amountRemaining . '</th>'; 
           echo '</tr>';
