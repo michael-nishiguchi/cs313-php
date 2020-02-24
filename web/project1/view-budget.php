@@ -41,17 +41,12 @@ require_once 'queries.php';
           echo '<tr>';
           echo '<th scope="col">' . $row['category_name'] . '</th>';
           echo '<th scope="col">' . $row['amount_budgeted'] . '</th>';
-
           //get total 
           $catTotal =  getCatTotal($row['category_id']);
           $amountRemaining = $row['amount_budgeted'] - $catTotal;
-
           echo ("Remaning: " . $amountRemaining);
-          $amountRemaining = ($row['amount_budgetd'] - $catTotal);
           echo '<th scope="col">' . $amountRemaining . '</th>'; 
-          echo '</tr>';
-
-          
+          echo '</tr>';       
         }
         
         
