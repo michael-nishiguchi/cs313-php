@@ -49,7 +49,7 @@ require_once 'queries.php';
             <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".deleteModal">Delete</button>
           </td>
 
-          <div class="deleteModal" tabindex="-1" role="dialog">
+          <div class=" modal deleteModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
