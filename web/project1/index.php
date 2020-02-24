@@ -20,7 +20,8 @@ switch ($action){
         include 'test.php';
         break;
     case 'delete-cat':
-        
+        $message = "Category was deleted";
+        include 'view-budget.php';
 
     case 'show-cat':
         break;

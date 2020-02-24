@@ -25,7 +25,12 @@ require_once 'queries.php';
   <title>View Budget</title>
 </head>
 <body>
-
+<?php
+        if(isset($message)){
+            var_dump($_SESSION['user_id']);
+            echo $message;
+        }
+    ?>
   <table class="table">
     <thead>
       <tr>
@@ -55,7 +60,7 @@ require_once 'queries.php';
           <div class=" modal deleteModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
-                <form action="index.php" metho="post">
+                <form action="index.php" method="post">
                   <div class="modal-header">
                     <h5 class="modal-title">Delete Category</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -66,7 +71,7 @@ require_once 'queries.php';
                     <p>Would you like to delete this category?</p>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" type="submit">Delete</button>
+                    <button class="btn btn-danger" type="submit">Delete</button>
                     <input type="hidden" name="action" value="delete-cat">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
