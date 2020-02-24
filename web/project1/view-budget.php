@@ -46,16 +46,52 @@ require_once 'queries.php';
 
           //call modal
           ?>
-          <td scope="col"><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button></td>
+          <td scope="col"><button class="btn btn-default" data-toggle="modal" data-target="#help">
+  <img src="img/help.png" alt="" class="img-circle">
+</button></td>
 
           
-          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              ...
-            </div>
-          </div>
+<div id="settings" class="modal fade" role="dialog">
+  <div class="modal-dialog" >
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Settings</h3>
+      </div>
+      <div class="modal-body">
+        <h4> Tethering</h4>
+        <label>Name:</label>
+        <input type="text" id="wlanName" size="15">
+        <label>Passphrase:</label>
+        <input type="text" id="passPhrase" size="15">
+        <br>
+        <br>
+        <button type="button" class="btn btn-success" onclick="enableTethering()">Enable tethering</button>
+        <button type="button" class="btn btn-danger" onclick="disableTethering()">Disable tethering</button>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <div id="help" class="modal fade" role="dialog">
+    <div class="modal-dialog" >
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Help</h3>
         </div>
+        <div class="modal-body">
+          *CONTENT TO BE MADE*
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    </div>
 <?php
 
           echo '<td scope="col">' . $row['amount_budgeted'] . '</td>';
