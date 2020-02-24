@@ -54,3 +54,10 @@ UPDATE users
 SET email = 'mike@gmail.com'
 WHERE user_name = 'My username';
 
+insert into transactions
+    (transaction_date, cost, business_name, category_id)
+    VALUES (
+        CURRENT_DATE, 600, 'new landlord', (SELECT category_id 
+                                        FROM category
+                                        WHERE category_name = 'rent')
+);

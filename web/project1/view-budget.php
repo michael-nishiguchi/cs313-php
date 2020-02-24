@@ -41,8 +41,16 @@ require_once 'queries.php';
           echo '<th scope="col">' . $row['amount_budgeted'] . '</th>';
 
           //get total 
-          $catTotal =  getCatTotal($row['category_id']);
+          $total = getCatTotal($row['cost']);
+          $catTotal;
+          while($newRow = $total->fetch(PDO::FETCH_ASSOC)) {
+            $catTotal += $newRow['cost'];
+            echo $catTotal;
+          }
+          //$catTotal =  getCatTotal($row['category_id']);
           var_dump("This is the cat total" . $catTotal);
+
+
           $amountRemaining = $row['amount_budgetd'] - $catTotal;
           echo '<th scope="col">' . $amountRemaining . '</th>'; 
           echo '</tr>';
