@@ -3,10 +3,13 @@ require_once 'queries.php';
   if ($_SESSION['loggedin'] == TRUE) {
     
     $transactions = getTransactionsFromId($_SESSION['user_id']);
+    /*
     while($row = $transactions->fetchAll(PDO::FETCH_ASSOC){
       var_dump($row);
     }
+    */
     var_dump($transactions);
+
     //$categories = getCategoriesFromId($user_id);
 
     exit;
