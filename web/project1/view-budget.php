@@ -45,7 +45,7 @@ require_once 'queries.php';
           //echo '<td scope="cole"><i class="far fa-edit"></i><i class="far fa-trash-alt"></i></td>';
 
           //call modal
-          echo '<td scope="col"><button type="button" class="btn btn-danger" data-toggle="modal" data-target="deleteModal">Delete</button>';
+          echo '<td scope="col"><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>';
 
           //modal
           echo '
